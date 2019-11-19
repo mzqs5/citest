@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <VersionPrefix>1.0.0.0</VersionPrefix>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AssetTargetFallback>$(AssetTargetFallback);portable-net45+win8+wp8+wpa81;</AssetTargetFallback>
+    <AssemblyName>IF.Application</AssemblyName>
+    <PackageId>IF.Application</PackageId>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <RootNamespace>IF</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>D:\project\myproject\prosche\4.7.1\aspnet-core\src\IF.Web.Host\apidocs\IF.Application.xml</DocumentationFile>
+    <OutputPath></OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>D:\Desktop\4.7.1\aspnet-core\src\IF.Web.Host\apidocs\IF.Application.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IF.Core\IF.Core.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Abp.HangFire.AspNetCore" Version="4.9.0" />
+    <PackageReference Include="DevExtreme.AspNet.Core" Version="18.1.5" />
+    <PackageReference Include="DevExtreme.AspNet.Data" Version="2.4.4" />
+    <PackageReference Include="DotNetCore.NPOI" Version="1.2.2" />
+    <PackageReference Include="Essensoft.AspNetCore.Payment.WeChatPay" Version="2.4.3" />
+    <PackageReference Include="HangFire.Core" Version="1.7.6" />
+    <PackageReference Include="HangFire.SqlServer" Version="1.7.6" />
+    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.2.0" />
+    <PackageReference Include="Senparc.Weixin.WxOpen" Version="3.5.5" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.6.1" />
+  </ItemGroup>
+</Project>

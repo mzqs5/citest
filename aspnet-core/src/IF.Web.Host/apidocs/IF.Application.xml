@@ -1,0 +1,3986 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>IF.Application</name>
+    </assembly>
+    <members>
+        <member name="F:IF.AppConsts.DefaultPassPhrase">
+            <summary>
+            Default pass phrase for SimpleStringCipher decrypt/encrypt operations
+            </summary>
+        </member>
+        <member name="T:IF.Authorization.Accounts.AccountAppService">
+            <summary>
+            无需鉴权
+            </summary>
+        </member>
+        <member name="M:IF.Authorization.Accounts.AccountAppService.Register(IF.Authorization.Accounts.Dto.RegisterInput)">
+            <summary>
+            用户注册（无需鉴权）
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Authorization.Accounts.AccountAppService.AddContacts(IF.Authorization.Accounts.AddContactsDto)">
+            <summary>
+            添加联系人(需鉴权【普通用户】)
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Authorization.Accounts.AccountAppService.RemoveContacts(System.Int32)">
+            <summary>
+            删除联系人(需鉴权【普通用户】)
+            </summary>
+            <param name="Id">联系人Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Authorization.Accounts.AccountAppService.SaveAddress(IF.Authorization.Accounts.AddAddressDto)">
+            <summary>
+            保存地址(需鉴权【普通用户】)
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Authorization.Accounts.AccountAppService.RemoveAddress(System.Int32)">
+            <summary>
+            删除地址(需鉴权【普通用户】)
+            </summary>
+            <param name="Id">用户地址Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Authorization.Accounts.AccountAppService.AddUserCar(IF.Authorization.Accounts.AddUserCarDto)">
+            <summary>
+            添加我的车(需鉴权【普通用户】)
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Authorization.Accounts.AccountAppService.AddCModelCar(IF.Authorization.Accounts.AddUserCModelDto)">
+            <summary>
+            添加我的车(需鉴权【普通用户】)
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Authorization.Accounts.AccountAppService.GetUserInfo">
+            <summary>
+            获取用户信息(需鉴权【普通用户】)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Authorization.Accounts.AccountAppService.SaveUserInfo(IF.Authorization.Accounts.UserEditDto)">
+            <summary>
+            修改我的信息
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="P:IF.Authorization.Accounts.AddUserCarDto.FrameNo">
+            <summary>
+            车架号
+            </summary>
+        </member>
+        <member name="P:IF.Authorization.Accounts.AddUserCarDto.CarId">
+            <summary>
+            车型Id
+            </summary>
+        </member>
+        <member name="P:IF.Authorization.Accounts.AddUserCarDto.Type">
+            <summary>
+            类型 1保时捷，2阿斯顿马丁
+            </summary>
+        </member>
+        <member name="P:IF.Authorization.Accounts.AddUserCModelDto.FrameNo">
+            <summary>
+            车架号
+            </summary>
+        </member>
+        <member name="P:IF.Authorization.Accounts.AddUserCModelDto.CModelId">
+            <summary>
+            车型Id
+            </summary>
+        </member>
+        <member name="P:IF.Authorization.Accounts.UserEditDto.Name">
+            <summary>
+            名
+            </summary>
+        </member>
+        <member name="P:IF.Authorization.Accounts.UserEditDto.Surname">
+            <summary>
+            姓
+            </summary>
+        </member>
+        <member name="P:IF.Authorization.Accounts.UserEditDto.Sex">
+            <summary>
+            性别 0男 1女
+            </summary>
+        </member>
+        <member name="P:IF.Authorization.Accounts.UserEditDto.IsCarOwner">
+            <summary>
+            是否车主 0否 1是
+            </summary>
+        </member>
+        <member name="P:IF.Authorization.Accounts.UserEditDto.Mobile">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:IF.Authorization.Accounts.UserEditDto.LastStoreId">
+            <summary>
+            所属门店
+            </summary>
+        </member>
+        <member name="P:IF.Authorization.Accounts.UserInfoDto.UserName">
+            <summary>
+            用户名称
+            </summary>
+        </member>
+        <member name="P:IF.Authorization.Accounts.UserInfoDto.Name">
+            <summary>
+            名
+            </summary>
+        </member>
+        <member name="P:IF.Authorization.Accounts.UserInfoDto.Surname">
+            <summary>
+            姓
+            </summary>
+        </member>
+        <member name="P:IF.Authorization.Accounts.UserInfoDto.Mobile">
+            <summary>
+            手机号码
+            </summary>
+        </member>
+        <member name="P:IF.Authorization.Accounts.UserInfoDto.FullName">
+            <summary>
+            全名
+            </summary>
+        </member>
+        <member name="P:IF.Authorization.Accounts.UserInfoDto.LastLoginTime">
+            <summary>
+            最后登录时间
+            </summary>
+        </member>
+        <member name="P:IF.Authorization.Accounts.UserInfoDto.CreationTime">
+            <summary>
+            注册时间
+            </summary>
+        </member>
+        <member name="P:IF.Authorization.Accounts.UserInfoDto.LastStoreId">
+            <summary>
+            最后一次门店Id
+            </summary>
+        </member>
+        <member name="P:IF.Authorization.Accounts.UserInfoDto.Wechats">
+            <summary>
+            微信信息
+            </summary>
+        </member>
+        <member name="P:IF.Authorization.Accounts.UserInfoDto.UserCars">
+            <summary>
+            用户的车
+            </summary>
+        </member>
+        <member name="P:IF.Authorization.Accounts.UserInfoDto.UserCModels">
+            <summary>
+            用户的车
+            </summary>
+        </member>
+        <member name="P:IF.Authorization.Accounts.UserInfoDto.Contacts">
+            <summary>
+            联系人
+            </summary>
+        </member>
+        <member name="P:IF.Authorization.Accounts.UserInfoDto.Address">
+            <summary>
+            我的地址
+            </summary>
+        </member>
+        <member name="P:IF.Authorization.Accounts.UserInfoDto.MyAppointmentCount">
+            <summary>
+            我的预约试驾数量
+            </summary>
+        </member>
+        <member name="P:IF.Authorization.Accounts.UserInfoDto.MyOrderCount">
+            <summary>
+            我的订单数量
+            </summary>
+        </member>
+        <member name="P:IF.Authorization.Accounts.UserInfoDto.MyShoppingCartCount">
+            <summary>
+            我的购物车数量
+            </summary>
+        </member>
+        <member name="P:IF.Authorization.Accounts.ContactsDto.Name">
+            <summary>
+            联系人名称
+            </summary>
+        </member>
+        <member name="P:IF.Authorization.Accounts.ContactsDto.Mobile">
+            <summary>
+            联系人手机号码
+            </summary>
+        </member>
+        <member name="P:IF.Authorization.Accounts.WechatDto.OpenId">
+            <summary>
+            OpenId
+            </summary>
+        </member>
+        <member name="P:IF.Authorization.Accounts.WechatDto.NickName">
+            <summary>
+            微信昵称
+            </summary>
+        </member>
+        <member name="P:IF.Authorization.Accounts.WechatDto.Avater">
+            <summary>
+            头像
+            </summary>
+        </member>
+        <member name="P:IF.Authorization.Accounts.WechatDto.Type">
+            <summary>
+            0 Web 1公众号 2小程序
+            </summary>
+        </member>
+        <member name="P:IF.Authorization.Accounts.UserCarDto.Id">
+            <summary>
+            我的车辆Id
+            </summary>
+        </member>
+        <member name="P:IF.Authorization.Accounts.UserCarDto.CarId">
+            <summary>
+            车型Id
+            </summary>
+        </member>
+        <member name="P:IF.Authorization.Accounts.UserCarDto.FrameNo">
+            <summary>
+            车架号
+            </summary>
+        </member>
+        <member name="P:IF.Authorization.Accounts.UserCarDto.CarName">
+            <summary>
+            车型名称
+            </summary>
+        </member>
+        <member name="P:IF.Authorization.Accounts.UserCarDto.Type">
+            <summary>
+            车类型
+            </summary>
+        </member>
+        <member name="P:IF.Authorization.Accounts.UserCModelDto.Id">
+            <summary>
+            我的车辆Id
+            </summary>
+        </member>
+        <member name="P:IF.Authorization.Accounts.UserCModelDto.CModelId">
+            <summary>
+            车型Id
+            </summary>
+        </member>
+        <member name="P:IF.Authorization.Accounts.UserCModelDto.FrameNo">
+            <summary>
+            车架号
+            </summary>
+        </member>
+        <member name="P:IF.Authorization.Accounts.UserCModelDto.CModelName">
+            <summary>
+            车型名称
+            </summary>
+        </member>
+        <member name="P:IF.Authorization.Accounts.AddContactsDto.Mobile">
+            <summary>
+            联系人手机号码
+            </summary>
+        </member>
+        <member name="P:IF.Authorization.Accounts.AddContactsDto.Code">
+            <summary>
+            短信验证码
+            </summary>
+        </member>
+        <member name="P:IF.Authorization.Accounts.AddAddressDto.City">
+            <summary>
+            城市
+            </summary>
+        </member>
+        <member name="P:IF.Authorization.Accounts.AddAddressDto.Area">
+            <summary>
+            地区
+            </summary>
+        </member>
+        <member name="P:IF.Authorization.Accounts.AddAddressDto.Street">
+            <summary>
+            街道
+            </summary>
+        </member>
+        <member name="P:IF.Authorization.Accounts.AddAddressDto.DetailAddress">
+            <summary>
+            详细地址
+            </summary>
+        </member>
+        <member name="P:IF.Authorization.Accounts.AddAddressDto.IsDefault">
+            <summary>
+            是否默认地址
+            </summary>
+        </member>
+        <member name="P:IF.Authorization.Accounts.AddressDto.City">
+            <summary>
+            城市
+            </summary>
+        </member>
+        <member name="P:IF.Authorization.Accounts.AddressDto.Area">
+            <summary>
+            地区
+            </summary>
+        </member>
+        <member name="P:IF.Authorization.Accounts.AddressDto.Street">
+            <summary>
+            街道
+            </summary>
+        </member>
+        <member name="P:IF.Authorization.Accounts.AddressDto.DetailAddress">
+            <summary>
+            详细地址
+            </summary>
+        </member>
+        <member name="P:IF.Authorization.Accounts.AddressDto.IsDefault">
+            <summary>
+            是否默认地址
+            </summary>
+        </member>
+        <member name="P:IF.Authorization.Accounts.Dto.RegisterInput.Mobile">
+            <summary>
+            手机号码
+            </summary>
+        </member>
+        <member name="P:IF.Authorization.Accounts.Dto.RegisterInput.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="M:IF.Authorization.HttpHelper.HttpPost(System.String,System.String,System.String,System.Int32,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            发起POST同步请求
+            
+            </summary>
+            <param name="url"></param>
+            <param name="postData"></param>
+            <param name="contentType">application/xml、application/json、application/text、application/x-www-form-urlencoded</param>
+            <param name="headers">填充消息头</param>        
+            <returns></returns>
+        </member>
+        <member name="M:IF.Authorization.HttpHelper.HttpPostAsync(System.String,System.String,System.String,System.Int32,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            发起POST异步请求
+            </summary>
+            <param name="url"></param>
+            <param name="postData"></param>
+            <param name="contentType">application/xml、application/json、application/text、application/x-www-form-urlencoded</param>
+            <param name="headers">填充消息头</param>        
+            <returns></returns>
+        </member>
+        <member name="M:IF.Authorization.HttpHelper.HttpGet(System.String,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            发起GET同步请求
+            </summary>
+            <param name="url"></param>
+            <param name="headers"></param>
+            <param name="contentType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Authorization.HttpHelper.HttpGetAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            发起GET异步请求
+            </summary>
+            <param name="url"></param>
+            <param name="headers"></param>
+            <param name="contentType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Authorization.AdminUserAppService.GetListDataAsync(DevExtreme.AspNet.Mvc.DataSourceLoadOptions)">
+            <summary>
+            获取管理员的相关信息，支持分页查询
+            </summary>
+            <param name="loadOptions">查询参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Authorization.AdminUserAppService.GetAsync(System.Int64)">
+            <summary>
+            根据ID获取管理员信息
+            </summary>
+            <param name="id">管理员信息主键</param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Authorization.AdminUserAppService.SaveAsync(IF.Authorization.AdminUserEditDto)">
+            <summary>
+            新增或者更改管理员信息
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Authorization.AdminUserAppService.GetEmptyEntityAsync">
+            <summary>
+            新增管理员的默认参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Authorization.AdminUserAppService.BatchDeleteAsync(System.String)">
+            <summary>
+            批量删除管理员
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Authorization.UserAccountAppService.GetListDataAsync(DevExtreme.AspNet.Mvc.DataSourceLoadOptions)">
+            <summary>
+            获取用户信息的相关信息，支持分页查询
+            </summary>
+            <param name="loadOptions">查询参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Authorization.UserAccountAppService.GetAsync(System.Int64)">
+            <summary>
+            根据ID获取用户信息信息
+            </summary>
+            <param name="id">用户信息信息主键</param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Authorization.UserAccountAppService.SaveAsync(IF.Authorization.UserAccountEditDto)">
+            <summary>
+            新增或者更改用户信息信息
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Authorization.UserAccountAppService.SaveUserCarAsync(IF.Authorization.UpdateUserCarEditDto)">
+            <summary>
+            更新用户车辆车架号
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Authorization.UserAccountAppService.BatchDeleteAsync(System.String)">
+            <summary>
+            批量删除用户信息
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="P:IF.Authorization.UpdateUserCarEditDto.FrameNo">
+            <summary>
+            车架号
+            </summary>
+        </member>
+        <member name="P:IF.Authorization.UserAccountEditDto.Name">
+            <summary>
+            名
+            </summary>
+        </member>
+        <member name="P:IF.Authorization.UserAccountEditDto.Surname">
+            <summary>
+            姓
+            </summary>
+        </member>
+        <member name="P:IF.Authorization.UserAccountEditDto.Sex">
+            <summary>
+            性别 0男 1女
+            </summary>
+        </member>
+        <member name="P:IF.Authorization.UserAccountEditDto.IsCarOwner">
+            <summary>
+            是否车主 0否 1是
+            </summary>
+        </member>
+        <member name="P:IF.Authorization.UserAccountEditDto.Mobile">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:IF.Authorization.UserAccountEditDto.LastStoreId">
+            <summary>
+            所属门店
+            </summary>
+        </member>
+        <member name="T:IF.IFAppServiceBase">
+            <summary>
+            Derive your application services from this class.
+            </summary>
+        </member>
+        <member name="T:IF.Net.MimeTypes.MimeTypeNames">
+            <summary>
+            Common mime types. 
+            </summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.ApplicationXJavascript">
+            <summary>Used to denote the encoding necessary for files containing JavaScript source code. The alternative MIME type for this file type is text/javascript.</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.AudioL24">
+            <summary>24bit Linear PCM audio at 8-48kHz, 1-N channels; Defined in RFC 3190</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.ApplicationXShockwaveFlash">
+            <summary>Adobe Flash files for example with the extension .swf</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.ApplicationOctetStream">
+            <summary>Arbitrary binary data.[5] Generally speaking this type identifies files that are not associated with a specific application. Contrary to past assumptions by software packages such as Apache this is not a type that should be applied to unknown files. In such a case, a server or application should not indicate a content type, as it may be incorrect, but rather, should omit the type in order to allow the recipient to guess the type.[6]</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.ApplicationAtomXml">
+            <summary>Atom feeds</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.TextCss">
+            <summary>Cascading Style Sheets; Defined in RFC 2318</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.TextCmd">
+            <summary>commands; subtype resident in Gecko browsers like Firefox 3.5</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.TextCsv">
+            <summary>Comma-separated values; Defined in RFC 4180</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.ApplicationXDeb">
+            <summary>deb (file format), a software package format used by the Debian project</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.MultipartEncrypted">
+            <summary>Defined in RFC 1847</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.MultipartSigned">
+            <summary>Defined in RFC 1847</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.MessageHttp">
+            <summary>Defined in RFC 2616</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.ModelExample">
+            <summary>Defined in RFC 4735</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.ApplicationXDvi">
+            <summary>device-independent document in DVI format</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.ApplicationXmlDtd">
+            <summary>DTD files; Defined by RFC 3023</summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "F:IF.Net.MimeTypes.MimeTypeNames.ApplicationJavascript" -->
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.ApplicationEcmascript">
+            <summary>ECMAScript/JavaScript; Defined in RFC 4329 (equivalent to application/javascript but with stricter processing rules)</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.ApplicationEdifact">
+            <summary>EDI EDIFACT data; Defined in RFC 1767</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.ApplicationEdiX12">
+            <summary>EDI X12 data; Defined in RFC 1767</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.MessagePartial">
+            <summary>Email; Defined in RFC 2045 and RFC 2046</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.MessageRfc822">
+            <summary>Email; EML files, MIME files, MHT files, MHTML files; Defined in RFC 2045 and RFC 2046</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.TextXml">
+            <summary>Extensible Markup Language; Defined in RFC 3023</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.VideoXFlv">
+            <summary>Flash video (FLV files)</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.ImageGif">
+            <summary>GIF image; Defined in RFC 2045 and RFC 2046</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.TextXGwtRpc">
+            <summary>GoogleWebToolkit data</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.ApplicationXGzip">
+            <summary>Gzip</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.TextHtml">
+            <summary>HTML; Defined in RFC 2854</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.ImageVndMicrosoftIcon">
+            <summary>ICO image; Registered[9]</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.ModelIges">
+            <summary>IGS files, IGES files; Defined in RFC 2077</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.MessageImdnXml">
+            <summary>IMDN Instant Message Disposition Notification; Defined in RFC 5438</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.ApplicationJson">
+            <summary>JavaScript Object Notation JSON; Defined in RFC 4627</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.ApplicationJsonPatch">
+            <summary>JavaScript Object Notation (JSON) Patch; Defined in RFC 6902</summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "F:IF.Net.MimeTypes.MimeTypeNames.TextJavascript" -->
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.ImagePjpeg">
+            <summary>JPEG JFIF image; Associated with Internet Explorer; Listed in ms775147(v=vs.85) - Progressive JPEG, initiated before global browser support for progressive JPEGs (Microsoft and Firefox).</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.ImageJpeg">
+            <summary>JPEG JFIF image; Defined in RFC 2045 and RFC 2046</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.TextXJqueryTmpl">
+            <summary>jQuery template data</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.ApplicationVndGoogleEarthKmlXml">
+            <summary>KML files (e.g. for Google Earth)</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.ApplicationXLatex">
+            <summary>LaTeX files</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.VideoXMatroska">
+            <summary>Matroska open media format</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.ApplicationVndOpenxmlformatsOfficedocumentSpreadsheetmlSheet">
+            <summary>Microsoft Excel 2007 files</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.ApplicationVndMsExcel">
+            <summary>Microsoft Excel files</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.ApplicationVndOpenxmlformatsOfficedocumentPresentationmlPresentation">
+            <summary>Microsoft Powerpoint 2007 files</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.ApplicationVndMsPowerpoint">
+            <summary>Microsoft Powerpoint files</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.ApplicationVndOpenxmlformatsOfficedocumentWordprocessingmlDocument">
+            <summary>Microsoft Word 2007 files</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.ApplicationMsword">
+            <summary>Microsoft Word files[15]</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.MultipartAlternative">
+            <summary>MIME Email; Defined in RFC 2045 and RFC 2046</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.MultipartMixed">
+            <summary>MIME Email; Defined in RFC 2045 and RFC 2046</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.MultipartRelated">
+            <summary>MIME Email; Defined in RFC 2387 and used by MHTML (HTML mail)</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.MultipartFormData">
+            <summary>MIME Webform; Defined in RFC 2388</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.ApplicationVndMozillaXulXml">
+            <summary>Mozilla XUL files</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.AudioMpeg">
+            <summary>MP3 or other MPEG audio; Defined in RFC 3003</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.AudioMp4">
+            <summary>MP4 audio</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.VideoMp4">
+            <summary>MP4 video; Defined in RFC 4337</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.VideoMpeg">
+            <summary>MPEG-1 video with multiplexed audio; Defined in RFC 2045 and RFC 2046</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.ModelMesh">
+            <summary>MSH files, MESH files; Defined in RFC 2077, SILO files</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.AudioBasic">
+            <summary>mulaw audio at 8 kHz, 1 channel; Defined in RFC 2046</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.VideoOgg">
+            <summary>Ogg Theora or other video (with audio); Defined in RFC 5334</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.AudioOgg">
+            <summary>Ogg Vorbis, Speex, Flac and other audio; Defined in RFC 5334</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.ApplicationOgg">
+            <summary>Ogg, a multimedia bitstream container format; Defined in RFC 5334</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.ApplicationXopXml">
+            <summary>OP</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.ApplicationVndOasisOpendocumentGraphics">
+            <summary>OpenDocument Graphics; Registered[14]</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.ApplicationVndOasisOpendocumentPresentation">
+            <summary>OpenDocument Presentation; Registered[13]</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.ApplicationVndOasisOpendocumentSpreadsheet">
+            <summary>OpenDocument Spreadsheet; Registered[12]</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.ApplicationVndOasisOpendocumentText">
+            <summary>OpenDocument Text; Registered[11]</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.ApplicationXPkcs12">
+            <summary>p12 files</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.ApplicationXPkcs7Certificates">
+            <summary>p7b and spc files</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.ApplicationXPkcs7Mime">
+            <summary>p7c files</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.ApplicationXPkcs7Certreqresp">
+            <summary>p7r files</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.ApplicationXPkcs7Signature">
+            <summary>p7s files</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.ApplicationPdf">
+            <summary>Portable Document Format, PDF has been in use for document exchange on the Internet since 1993; Defined in RFC 3778</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.ImagePng">
+            <summary>Portable Network Graphics; Registered,[8] Defined in RFC 2083</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.ApplicationPostscript">
+            <summary>PostScript; Defined in RFC 2046</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.VideoQuicktime">
+            <summary>QuickTime video; Registered[10]</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.ApplicationXRarCompressed">
+            <summary>RAR archive files</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.AudioVndRnRealaudio">
+            <summary>RealAudio; Documented in RealPlayer Customer Support Answer 2559</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.ApplicationRdfXml">
+            <summary>Resource Description Framework; Defined by RFC 3870</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.ApplicationRssXml">
+            <summary>RSS feeds</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.ApplicationSoapXml">
+            <summary>SOAP; Defined by RFC 3902</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.ApplicationXStuffit">
+            <summary>StuffIt archive files</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.ImageSvgXml">
+            <summary>SVG vector image; Defined in SVG Tiny 1.2 Specification Appendix M</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.ImageTiff">
+            <summary>Tag Image File Format (only for Baseline TIFF); Defined in RFC 3302</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.ApplicationXTar">
+            <summary>Tarball files</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.TextPlain">
+            <summary>Textual data; Defined in RFC 2046 and RFC 3676</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.ApplicationXFontTtf">
+            <summary>TrueType Font No registered MIME type, but this is the most commonly used</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.TextVcard">
+            <summary>vCard (contact information); Defined in RFC 6350</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.AudioVorbis">
+            <summary>Vorbis encoded audio; Defined in RFC 5215</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.AudioVndWave">
+            <summary>WAV audio; Defined in RFC 2361</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.ApplicationFontWoff">
+            <summary>Web Open Font Format; (candidate recommendation; use application/x-font-woff until standard is official)</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.VideoWebm">
+            <summary>WebM Matroska-based open media format</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.AudioWebm">
+            <summary>WebM open media format</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.AudioXMsWax">
+            <summary>Windows Media Audio Redirector; Documented in Microsoft help page</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.AudioXMsWma">
+            <summary>Windows Media Audio; Documented in Microsoft KB 288102</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.VideoXMsWmv">
+            <summary>Windows Media Video; Documented in Microsoft KB 288102</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.ModelVrml">
+            <summary>WRL files, VRML files; Defined in RFC 2077</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.ModelX3DXml">
+            <summary>X3D ISO standard for representing 3D computer graphics, X3D XML files</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.ModelX3DBinary">
+            <summary>X3D ISO standard for representing 3D computer graphics, X3DB binary files</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.ModelX3DVrml">
+            <summary>X3D ISO standard for representing 3D computer graphics, X3DV VRML files</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.ApplicationXhtmlXml">
+            <summary>XHTML; Defined by RFC 3236</summary>
+        </member>
+        <member name="F:IF.Net.MimeTypes.MimeTypeNames.ApplicationZip">
+            <summary>ZIP archive files; Registered[7]</summary>
+        </member>
+        <member name="M:IF.Pay.WeChatPayAppService.JSAPIPay(System.Int32,System.String)">
+            <summary>
+            JSAPI支付
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Pay.WeChatPayAppService.QrCodePay(System.Int32)">
+            <summary>
+            扫码支付
+            </summary>
+            <param name="id">订单Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Pay.WeChatPayAppService.LiteAppPay(System.Int32)">
+            <summary>
+            小程序支付
+            </summary>
+            <param name="id">订单id</param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Pay.WeChatPayAppService.H5Pay(System.Int32)">
+            <summary>
+            H5支付
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Pay.WeChatPayAppService.Unifiedorder">
+            <summary>
+            统一下单支付结果通知
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Pay.WeChatPayAppService.Refund">
+            <summary>
+            退款结果通知
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.ActivityAppService.GetListDataAsync(DevExtreme.AspNet.Mvc.DataSourceLoadOptions)">
+            <summary>
+             获取活动的相关信息，支持分页查询
+            </summary>
+            <param name="loadOptions">查询参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.ActivityAppService.GetAsync(System.Int32)">
+            <summary>
+            根据ID获取活动信息
+            </summary>
+            <param name="id">活动信息主键</param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.ActivityAppService.GetNewAsync">
+            <summary>
+            获取最新消息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.ActivityAppService.SaveAsync(IF.Porsche.ActivityEditDto)">
+            <summary>
+            新增或者更改活动信息
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.ActivityAppService.GetEmptyEntityAsync">
+            <summary>
+            新增活动的默认参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.ActivityAppService.BatchDeleteAsync(System.String)">
+            <summary>
+            批量删除活动
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="P:IF.Porsche.ActivityEditDto.EOption">
+            <summary>
+            活动参数英文
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.ActivityEditDto.Option">
+            <summary>
+            活动参数
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.ActivityEditDto.Type">
+            <summary>
+            0 活动 1票务 2最新消息
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.ActivityEditDto.State">
+            <summary>
+            0 有效 1过期
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.ActivityEditDto.Title">
+            <summary>
+            活动标题
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.ActivityEditDto.ImgUrl">
+            <summary>
+            封面图
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.ActivityEditDto.Desc">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.ActivityEditDto.Imgs">
+            <summary>
+            轮播图
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.ActivityEditDto.BackDetail">
+            <summary>
+            活动详情2
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.ActivityEditDto.PerDetail">
+            <summary>
+            活动详情1
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.ActivityEditDto.IntroDetail">
+            <summary>
+            简介
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.ActivityEditDto.MobileImgUrl">
+            <summary>
+            移动端封面图
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.ActivityEditDto.ThumbnailUrl">
+            <summary>
+            缩略图
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.ActivityEditDto.MobileThumbnailUrl">
+            <summary>
+            移动端缩略图
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.ActivityEditDto.MobileImgs">
+            <summary>
+            移动端轮播图
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.ActivityEditDto.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.ActivityEditDto.Date">
+            <summary>
+            日期
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.ActivityEditDto.Address">
+            <summary>
+            地点
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.ActivityEditDto.FromName">
+            <summary>
+            表单名称
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.ActivityEditDto.ETitle">
+            <summary>
+            活动标题英文
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.ActivityEditDto.EDesc">
+            <summary>
+            描述英文
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.ActivityEditDto.EDate">
+            <summary>
+            日期英文
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.ActivityEditDto.EAddress">
+            <summary>
+            地点英文
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.ActivityEditDto.EFromName">
+            <summary>
+            表单名称英文
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.ActivityEditDto.EBackDetail">
+            <summary>
+            活动详情英文
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.ActivityEditDto.EPerDetail">
+            <summary>
+            活动详情英文
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.ActivityEditDto.EIntroDetail">
+            <summary>
+            简介英文
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.ActivityDto.EOption">
+            <summary>
+            活动参数英文
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.ActivityDto.Option">
+            <summary>
+            活动参数
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.ActivityDto.Type">
+            <summary>
+            0 活动 1票务 2最新消息
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.ActivityDto.State">
+            <summary>
+            0 有效 1过期
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.ActivityDto.Title">
+            <summary>
+            活动标题
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.ActivityDto.ImgUrl">
+            <summary>
+            封面图
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.ActivityDto.MobileImgUrl">
+            <summary>
+            移动端封面图
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.ActivityDto.ThumbnailUrl">
+            <summary>
+            缩略图
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.ActivityDto.MobileThumbnailUrl">
+            <summary>
+            移动端缩略图
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.ActivityDto.MobileImgs">
+            <summary>
+            移动端轮播图
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.ActivityDto.Desc">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.ActivityDto.Imgs">
+            <summary>
+            轮播图
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.ActivityDto.BackDetail">
+            <summary>
+            活动详情2
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.ActivityDto.PerDetail">
+            <summary>
+            活动详情1
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.ActivityDto.IntroDetail">
+            <summary>
+            简介
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.ActivityDto.Link">
+            <summary>
+            外链
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.ActivityDto.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.ActivityDto.Date">
+            <summary>
+            日期
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.ActivityDto.Address">
+            <summary>
+            地点
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.ActivityDto.FromName">
+            <summary>
+            表单名称
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.ActivityDto.ETitle">
+            <summary>
+            活动标题英文
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.ActivityDto.EDesc">
+            <summary>
+            描述英文
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.ActivityDto.EDate">
+            <summary>
+            日期英文
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.ActivityDto.EAddress">
+            <summary>
+            地点英文
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.ActivityDto.EFromName">
+            <summary>
+            表单名称英文
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.ActivityDto.EBackDetail">
+            <summary>
+            活动详情英文
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.ActivityDto.EPerDetail">
+            <summary>
+            活动详情英文
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.ActivityDto.EIntroDetail">
+            <summary>
+            简介英文
+            </summary>
+        </member>
+        <member name="M:IF.Porsche.AppointmentActivityAppService.GetListDataAsync(DevExtreme.AspNet.Mvc.DataSourceLoadOptions)">
+            <summary>
+            获取预约活动的相关信息，支持分页查询
+            </summary>
+            <param name="loadOptions">查询参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.AppointmentActivityAppService.GetMyListDataAsync(DevExtreme.AspNet.Mvc.DataSourceLoadOptions)">
+            <summary>
+            获取我的预约活动的相关信息，支持分页查询
+            </summary>
+            <param name="loadOptions">查询参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.AppointmentActivityAppService.GetAsync(System.Int32)">
+            <summary>
+            根据ID获取预约活动信息
+            </summary>
+            <param name="id">预约活动信息主键</param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.AppointmentActivityAppService.SaveAsync(IF.Porsche.AppointmentActivityEditDto)">
+            <summary>
+            新增或者更改预约活动信息
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.AppointmentActivityAppService.AdminSaveAsync(IF.Porsche.AppointmentActivityEditDto)">
+            <summary>
+            更改预约活动信息
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.AppointmentActivityAppService.GetEmptyEntityAsync">
+            <summary>
+            新增预约活动的默认参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.AppointmentActivityAppService.BatchDeleteAsync(System.String)">
+            <summary>
+            批量删除预约活动
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.AppointmentActivityAppService.Total(System.Int32)">
+            <summary>
+            获取统计
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:IF.Porsche.AppointmentActivityEditDto.ActivityId">
+            <summary>
+            活动Id
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentActivityEditDto.StoreId">
+            <summary>
+            门店Id
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentActivityEditDto.Sex">
+            <summary>
+            性别 0男 1女
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentActivityEditDto.SurName">
+            <summary>
+            姓
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentActivityEditDto.Name">
+            <summary>
+            名
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentActivityEditDto.Mobile">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentActivityDto.UserId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentActivityDto.ActivityId">
+            <summary>
+            活动Id
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentActivityDto.ActivityTitle">
+            <summary>
+            活动标题
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentActivityDto.StoreId">
+            <summary>
+            门店Id
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentActivityDto.StoreName">
+            <summary>
+            门店名称
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentActivityDto.Sex">
+            <summary>
+            性别 0男 1女
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentActivityDto.SurName">
+            <summary>
+            姓
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentActivityDto.Name">
+            <summary>
+            名
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentActivityDto.Mobile">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentActivityDto.CreationTime">
+            <summary>
+            提交时间
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentActivityDto.State">
+            <summary>
+            状态 0有效/1跟进/2无效
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentActivityDto.ContactState">
+            <summary>
+            联系状态 0未联系/1联系失败/2延迟提醒/3确认预约
+            </summary>
+        </member>
+        <member name="M:IF.Porsche.AppointmentWebActivityAppService.GetListDataAsync(DevExtreme.AspNet.Mvc.DataSourceLoadOptions)">
+            <summary>
+            获取网站活动预约的相关信息，支持分页查询
+            </summary>
+            <param name="loadOptions">查询参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.AppointmentWebActivityAppService.GetMyListDataAsync(DevExtreme.AspNet.Mvc.DataSourceLoadOptions)">
+            <summary>
+            获取我的网站活动预约的相关信息，支持分页查询
+            </summary>
+            <param name="loadOptions">查询参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.AppointmentWebActivityAppService.GetAsync(System.Int32)">
+            <summary>
+            根据ID获取网站活动预约信息
+            </summary>
+            <param name="id">网站活动预约信息主键</param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.AppointmentWebActivityAppService.SaveAsync(IF.Porsche.AppointmentWebActivityEditDto)">
+            <summary>
+            新增或者更改网站活动预约信息
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.AppointmentWebActivityAppService.AdminSaveAsync(IF.Porsche.AdminAppointmentWebActivityEditDto)">
+            <summary>
+            更改网站活动预约信息
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.AppointmentWebActivityAppService.GetEmptyEntityAsync">
+            <summary>
+            新增网站活动预约的默认参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.AppointmentWebActivityAppService.BatchDeleteAsync(System.String)">
+            <summary>
+            批量删除网站活动预约
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.AppointmentWebActivityAppService.WriteOff(System.String)">
+            <summary>
+            核销
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:IF.Porsche.AppointmentWebActivityEditDto.SurName">
+            <summary>
+            姓
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentWebActivityEditDto.Name">
+            <summary>
+            名
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentWebActivityEditDto.ActivityId">
+            <summary>
+            活动Id
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentWebActivityEditDto.Mobile">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentWebActivityEditDto.Option">
+            <summary>
+            参数
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AdminAppointmentWebActivityEditDto.State">
+            <summary>
+            状态 0有效/1跟进/2无效
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AdminAppointmentWebActivityEditDto.ContactState">
+            <summary>
+            联系状态 0未联系/1联系失败/2延迟提醒/3确认预约
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentWebActivityDto.ActivityId">
+            <summary>
+            活动Id
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentWebActivityDto.ActivityType">
+            <summary>
+            活动类型
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentWebActivityDto.ActivityTitle">
+            <summary>
+            活动标题
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentWebActivityDto.ActivityAddress">
+            <summary>
+            活动地址
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentWebActivityDto.EActivityTitle">
+            <summary>
+            活动标题 英文
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentWebActivityDto.EActivityAddress">
+            <summary>
+            活动地址 英文
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentWebActivityDto.UserId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentWebActivityDto.SurName">
+            <summary>
+            姓
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentWebActivityDto.Name">
+            <summary>
+            名
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentWebActivityDto.Mobile">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentWebActivityDto.Option">
+            <summary>
+            参数
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentWebActivityDto.CreationTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentWebActivityDto.State">
+            <summary>
+            状态 0有效/1跟进/2无效
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentWebActivityDto.AppointmentType">
+            <summary>
+            预约类型
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentWebActivityDto.ContactState">
+            <summary>
+            联系状态 0未联系/1联系失败/2延迟提醒/3确认预约
+            </summary>
+        </member>
+        <member name="M:IF.Porsche.StoreActivityAppService.GetListDataAsync(DevExtreme.AspNet.Mvc.DataSourceLoadOptions)">
+            <summary>
+             获取活动的相关信息，支持分页查询
+            </summary>
+            <param name="loadOptions">查询参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.StoreActivityAppService.GetAsync(System.Int32)">
+            <summary>
+            根据ID获取活动信息
+            </summary>
+            <param name="id">活动信息主键</param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.StoreActivityAppService.SaveAsync(IF.Porsche.StoreActivityEditDto)">
+            <summary>
+            新增或者更改活动信息
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.StoreActivityAppService.GetEmptyEntityAsync">
+            <summary>
+            新增活动的默认参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.StoreActivityAppService.BatchDeleteAsync(System.String)">
+            <summary>
+            批量删除活动
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="P:IF.Porsche.StoreActivityEditDto.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.StoreActivityEditDto.StoreId">
+            <summary>
+            所属门店Id
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.StoreActivityEditDto.Desc">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.StoreActivityEditDto.ImgUrl">
+            <summary>
+            封面图
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.StoreActivityEditDto.Detail">
+            <summary>
+            正文
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.StoreActivityDto.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.StoreActivityDto.StoreId">
+            <summary>
+            所属门店Id
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.StoreActivityDto.StoreName">
+            <summary>
+            门店名称
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.StoreActivityDto.Desc">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.StoreActivityDto.ImgUrl">
+            <summary>
+            封面图
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.StoreActivityDto.Detail">
+            <summary>
+            正文
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.StoreActivityDto.CreationTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="M:IF.Porsche.CarAppService.GetListDataAsync(DevExtreme.AspNet.Mvc.DataSourceLoadOptions)">
+            <summary>
+            获取车型的相关信息，支持分页查询
+            </summary>
+            <param name="loadOptions">查询参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.CarAppService.GetAsync(System.Int32)">
+            <summary>
+            根据ID获取车型信息
+            </summary>
+            <param name="id">车型信息主键</param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.CarAppService.SaveAsync(IF.Porsche.CarEditDto)">
+            <summary>
+            新增或者更改车型信息
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.CarAppService.GetEmptyEntityAsync">
+            <summary>
+            新增车型的默认参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.CarAppService.BatchDeleteAsync(System.String)">
+            <summary>
+            批量删除车型
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="P:IF.Porsche.CarEditDto.Name">
+            <summary>
+            车型名称
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.CarEditDto.Type">
+            <summary>
+            类型 1保时捷，2阿斯顿马丁
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.CarDto.Name">
+            <summary>
+            车型名称
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.CarDto.Type">
+            <summary>
+            类型 1保时捷，2阿斯顿马丁
+            </summary>
+        </member>
+        <member name="M:IF.Porsche.CModelAppService.GetListDataAsync(DevExtreme.AspNet.Mvc.DataSourceLoadOptions)">
+            <summary>
+            获取车型的相关信息，支持分页查询
+            </summary>
+            <param name="loadOptions">查询参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.CModelAppService.GetAsync(System.Int32)">
+            <summary>
+            根据ID获取车型信息
+            </summary>
+            <param name="id">车型信息主键</param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.CModelAppService.SaveAsync(IF.Porsche.CModelEditDto)">
+            <summary>
+            新增或者更改车型信息
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.CModelAppService.GetEmptyEntityAsync">
+            <summary>
+            新增车型的默认参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.CModelAppService.BatchDeleteAsync(System.String)">
+            <summary>
+            批量删除车型
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="P:IF.Porsche.CModelEditDto.Name">
+            <summary>
+            车型名称
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.CModelEditDto.BgPic">
+            <summary>
+            大图
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.CModelEditDto.Pic">
+            <summary>
+            小图
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.CModelDto.Name">
+            <summary>
+            车型名称
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.CModelDto.BgPic">
+            <summary>
+            大图
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.CModelDto.Pic">
+            <summary>
+            小图
+            </summary>
+        </member>
+        <member name="T:IF.Porsche.OrderAppService">
+            <summary>
+            订单应用服务
+            </summary>
+        </member>
+        <member name="M:IF.Porsche.OrderAppService.GetListDataAsync(DevExtreme.AspNet.Mvc.DataSourceLoadOptions)">
+            <summary>
+            获取订单的相关信息，支持分页查询（后台使用）
+            </summary>
+            <param name="loadOptions">查询参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.OrderAppService.GetMyListDataAsync(DevExtreme.AspNet.Mvc.DataSourceLoadOptions)">
+            <summary>
+            获取我的订单的相关信息，支持分页查询（前台使用）
+            </summary>
+            <param name="loadOptions">查询参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.OrderAppService.GetAsync(System.Int32)">
+            <summary>
+            根据ID获取订单信息
+            </summary>
+            <param name="id">订单信息主键</param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.OrderAppService.SaveAsync(IF.Porsche.OrderEditDto)">
+            <summary>
+            新增订单信息
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.OrderAppService.GetEmptyEntityAsync">
+            <summary>
+            新增订单的默认参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.OrderAppService.BatchDeleteAsync(System.String)">
+            <summary>
+            批量删除订单
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.OrderAppService.WriteOff(System.String)">
+            <summary>
+            核销
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.OrderAppService.Total(System.Int32)">
+            <summary>
+            获取统计
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:IF.Porsche.OrderEditDto.DealerId">
+            <summary>
+            经销商Id
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.OrderEditDto.Remarks">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.OrderEditDto.OrderItems">
+            <summary>
+            订单详细
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AdminOrderEditDto.PayMode">
+            <summary>
+            支付方式
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AdminOrderEditDto.PayCer">
+            <summary>
+            支付凭证
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.OrderDto.UserId">
+            <summary>
+            会员Id
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.OrderDto.DealerId">
+            <summary>
+            经销商Id
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.OrderDto.FullName">
+            <summary>
+            全名
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.OrderDto.Mobile">
+            <summary>
+            手机号码
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.OrderDto.StoreName">
+            <summary>
+            门店名称
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.OrderDto.OrderNo">
+            <summary>
+            订单编号
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.OrderDto.Amount">
+            <summary>
+            总金额
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.OrderDto.Price">
+            <summary>
+            单价
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.OrderDto.Quantity">
+            <summary>
+            总数量
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.OrderDto.State">
+            <summary>
+            状态 0待付款 1已付款 2已退款
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.OrderDto.StateText">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.OrderDto.Progress">
+            <summary>
+            状态 0未使用/1使用中/2已使用/3失效
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.OrderDto.ProgressText">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.OrderDto.Remarks">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.OrderDto.ProductName">
+            <summary>
+            商品名称
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.OrderDto.CModelIds">
+            <summary>
+            车型id
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.OrderDto.CModels">
+            <summary>
+            车型
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.OrderDto.OrderItems">
+            <summary>
+            订单详细
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.OrderDto.PayMode">
+            <summary>
+            支付方式
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.OrderDto.PayCer">
+            <summary>
+            支付凭证
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.OrderDto.PayTime">
+            <summary>
+            支付时间
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.OrderItemEditDto.ProductId">
+            <summary>
+            产品Id
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.OrderItemEditDto.Quantity">
+            <summary>
+            数量
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.OrderItemDto.ProductId">
+            <summary>
+            产品Id
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.OrderItemDto.ProductName">
+            <summary>
+            产品名称
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.OrderItemDto.CModelIds">
+            <summary>
+            车型Id
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.OrderItemDto.CModels">
+            <summary>
+            车型
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.OrderItemDto.Quantity">
+            <summary>
+            数量
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.OrderItemDto.Price">
+            <summary>
+            单价
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.OrderItemDto.Amount">
+            <summary>
+            总额
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.OrderItemDto.ProductPic">
+            <summary>
+            产品图片
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.OrderItemDto.CouponETime">
+            <summary>
+            卡劵有效期
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.OrderItemDto.Validity">
+            <summary>
+            有效期
+            </summary>
+        </member>
+        <member name="T:IF.Porsche.OrderUseAppService">
+            <summary>
+            订单使用应用服务
+            </summary>
+        </member>
+        <member name="M:IF.Porsche.OrderUseAppService.GetListDataAsync(DevExtreme.AspNet.Mvc.DataSourceLoadOptions)">
+            <summary>
+            获取订单使用的相关信息，支持分页查询（后台使用）
+            </summary>
+            <param name="loadOptions">查询参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.OrderUseAppService.GetAsync(System.Int32)">
+            <summary>
+            根据ID获取订单信息
+            </summary>
+            <param name="id">订单信息主键</param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.OrderUseAppService.SaveAsync(IF.Porsche.OrderUseEditDto)">
+            <summary>
+            新增订单使用信息
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.OrderUseAppService.WriteOff(System.String)">
+            <summary>
+            审批
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.OrderUseAppService.Reject(System.String)">
+            <summary>
+            驳回
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:IF.Porsche.OrderUseEditDto.OrderId">
+            <summary>
+            订单Id
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.OrderUseEditDto.ETime">
+            <summary>
+            有效期
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.OrderUseEditDto.GoodsName">
+            <summary>
+            消费项目
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.OrderUseEditDto.PayAmount">
+            <summary>
+            消费金额
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.OrderUseEditDto.WorkNo">
+            <summary>
+            工单号
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.OrderUseEditDto.Remarks">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.OrderUseDto.UserId">
+            <summary>
+            会员Id
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.OrderUseDto.DealerId">
+            <summary>
+            经销商Id
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.OrderUseDto.FullName">
+            <summary>
+            全名
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.OrderUseDto.Mobile">
+            <summary>
+            手机号码
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.OrderUseDto.StoreName">
+            <summary>
+            门店名称
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.OrderUseDto.OrderNo">
+            <summary>
+            订单编号
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.OrderUseDto.OrderId">
+            <summary>
+            订单Id
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.OrderUseDto.ETime">
+            <summary>
+            有效期
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.OrderUseDto.GoodsName">
+            <summary>
+            消费项目
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.OrderUseDto.Amount">
+            <summary>
+            订单总金额
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.OrderUseDto.Balance">
+            <summary>
+            余额
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.OrderUseDto.PayAmount">
+            <summary>
+            消费金额
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.OrderUseDto.WorkNo">
+            <summary>
+            工单号
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.OrderUseDto.State">
+            <summary>
+            状态 0待审批/1已使用/2已驳回
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.OrderUseDto.StateText">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.OrderUseDto.Remarks">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.OrderUseDto.OrderItems">
+            <summary>
+            订单详细
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.OrderUseDto.ProductName">
+            <summary>
+            商品名称
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.OrderUseDto.CModelIds">
+            <summary>
+            车型id
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.OrderUseDto.CModels">
+            <summary>
+            车型
+            </summary>
+        </member>
+        <member name="T:IF.Porsche.ProductAppService">
+            <summary>
+            商品应用服务
+            </summary>
+        </member>
+        <member name="M:IF.Porsche.ProductAppService.QueryListDataAsync(IF.Porsche.QueryDto)">
+            <summary>
+            获取商品的相关信息，支持分页查询
+            </summary>
+            <param name="loadOptions">查询参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.ProductAppService.GetAsync(System.Int32)">
+            <summary>
+            根据ID获取商品信息
+            </summary>
+            <param name="id">商品信息主键</param>
+            <returns></returns>
+        </member>
+        <member name="P:IF.Porsche.QueryDto.CarId">
+            <summary>
+            按车型Id查询
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.QueryDto.DealerId">
+            <summary>
+            按经销商Id查询
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.GoodsEditDto.ProductName">
+            <summary>
+            商品名称
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.GoodsEditDto.ProductPic">
+            <summary>
+            商品图片
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.GoodsEditDto.ProductDetailPic">
+            <summary>
+            商品详情图
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.GoodsEditDto.ProductSales">
+            <summary>
+            商品售价
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.GoodsEditDto.ProductPrice">
+            <summary>
+            商品价格
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.GoodsEditDto.DisplayPrice">
+            <summary>
+            显示价格
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.GoodsEditDto.ProductDesc">
+            <summary>
+            商品详情
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.GoodsEditDto.Processing">
+            <summary>
+            处理
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.GoodsEditDto.Mask">
+            <summary>
+            封面
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.GoodsEditDto.CouponId">
+            <summary>
+            卡券Id
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.GoodsEditDto.DealerId">
+            <summary>
+            经销商Id 门店
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.GoodsEditDto.PriceCount">
+            <summary>
+            价格计算
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.GoodsEditDto.ProductStatus">
+            <summary>
+            商品状态
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.GoodsEditDto.IsTop">
+            <summary>
+            是否置顶
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.GoodsDto.ProductId">
+            <summary>
+            商品Id
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.GoodsDto.ProductName">
+            <summary>
+            商品名称
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.GoodsDto.ProductPic">
+            <summary>
+            商品图片
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.GoodsDto.ProductDetailPic">
+            <summary>
+            商品详情图
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.GoodsDto.ProductSales">
+            <summary>
+            商品售价
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.GoodsDto.ProductPrice">
+            <summary>
+            商品价格
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.GoodsDto.DisplayPrice">
+            <summary>
+            显示价格
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.GoodsDto.ProductDesc">
+            <summary>
+            商品详情
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.GoodsDto.Processing">
+            <summary>
+            处理
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.GoodsDto.Mask">
+            <summary>
+            封面
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.GoodsDto.CouponId">
+            <summary>
+            卡券Id
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.GoodsDto.DealerId">
+            <summary>
+            经销商Id 门店
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.GoodsDto.PriceCount">
+            <summary>
+            价格计算
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.GoodsDto.ProductStatus">
+            <summary>
+            商品状态
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.GoodsDto.IsTop">
+            <summary>
+            是否置顶
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.GoodsDto.CouponName">
+            <summary>
+            卡劵名称
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.GoodsDto.CouponETime">
+            <summary>
+            有效时间
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.GoodsDto.CouponValidity">
+            <summary>
+            有效性
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.GoodsDto.CouponDesc">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.GoodsDto.CouponTags">
+            <summary>
+            标签
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.GoodsDto.CouponMoney">
+            <summary>
+            金额
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.GoodsDto.CouponBlance">
+            <summary>
+            余额
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.GoodsDto.CouponUseNumber">
+            <summary>
+            使用数量
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.GoodsDto.CModelsId">
+            <summary>
+            车型Id
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.GoodsDto.CouponStatus">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="M:IF.Porsche.ShoppingCartAppService.GetListDataAsync(DevExtreme.AspNet.Mvc.DataSourceLoadOptions)">
+            <summary>
+            获取购物车的相关信息，支持分页查询
+            </summary>
+            <param name="loadOptions">查询参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.ShoppingCartAppService.GetMyListDataAsync(DevExtreme.AspNet.Mvc.DataSourceLoadOptions)">
+            <summary>
+            获取购物车的相关信息，支持分页查询
+            </summary>
+            <param name="loadOptions">查询参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.ShoppingCartAppService.GetAsync(System.Int32)">
+            <summary>
+            根据ID获取购物车信息
+            </summary>
+            <param name="id">购物车信息主键</param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.ShoppingCartAppService.SaveAsync(IF.Porsche.ShoppingCartEditDto)">
+            <summary>
+            新增或者更改购物车信息
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.ShoppingCartAppService.GetEmptyEntityAsync">
+            <summary>
+            新增购物车的默认参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.ShoppingCartAppService.BatchDeleteAsync(System.String)">
+            <summary>
+            批量删除购物车
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="P:IF.Porsche.ShoppingCartEditDto.DealerId">
+            <summary>
+            经销商Id
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.ShoppingCartEditDto.ProductId">
+            <summary>
+            商品Id
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.ShoppingCartEditDto.Quantity">
+            <summary>
+            数量
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.ShoppingCartDto.UserId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.ShoppingCartDto.DealerId">
+            <summary>
+            经销商Id
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.ShoppingCartDto.ProductId">
+            <summary>
+            商品Id
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.ShoppingCartDto.Quantity">
+            <summary>
+            数量
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.ShoppingCartDto.ProductName">
+            <summary>
+            产品名称
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.ShoppingCartDto.ProductPrice">
+            <summary>
+            产品价格
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.ShoppingCartDto.ProductPic">
+            <summary>
+            产品图片
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.ShoppingCartDto.ProductDesc">
+            <summary>
+            产品描述
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.ShoppingCartDto.ProductDealerId">
+            <summary>
+            可用经销商
+            </summary>
+        </member>
+        <member name="M:IF.Porsche.AppointmentEuroDriveAppService.GetListDataAsync(DevExtreme.AspNet.Mvc.DataSourceLoadOptions)">
+            <summary>
+            获取预约追星欧洲的相关信息，支持分页查询
+            </summary>
+            <param name="loadOptions">查询参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.AppointmentEuroDriveAppService.GetMyListDataAsync(DevExtreme.AspNet.Mvc.DataSourceLoadOptions)">
+            <summary>
+            获取我的预约追星欧洲的相关信息，支持分页查询
+            </summary>
+            <param name="loadOptions">查询参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.AppointmentEuroDriveAppService.GetAsync(System.Int32)">
+            <summary>
+            根据ID获取预约追星欧洲信息
+            </summary>
+            <param name="id">预约追星欧洲信息主键</param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.AppointmentEuroDriveAppService.SaveAsync(IF.Porsche.AppointmentEuroDriveEditDto)">
+            <summary>
+            新增或者更改预约追星欧洲信息
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.AppointmentEuroDriveAppService.GetEmptyEntityAsync">
+            <summary>
+            新增预约追星欧洲的默认参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.AppointmentEuroDriveAppService.BatchDeleteAsync(System.String)">
+            <summary>
+            批量删除预约追星欧洲
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="P:IF.Porsche.AppointmentEuroDriveEditDto.SurName">
+            <summary>
+            姓
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentEuroDriveEditDto.Name">
+            <summary>
+            名
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentEuroDriveEditDto.Mobile">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentEuroDriveEditDto.Option">
+            <summary>
+            参数
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentEuroDriveDto.UserId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentEuroDriveDto.SurName">
+            <summary>
+            姓
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentEuroDriveDto.Name">
+            <summary>
+            名
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentEuroDriveDto.Mobile">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentEuroDriveDto.Option">
+            <summary>
+            参数
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentEuroDriveDto.AppointmentType">
+            <summary>
+            预约类型
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentEuroDriveDto.CreationTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="M:IF.Porsche.AppointmentRacingAppService.GetListDataAsync(DevExtreme.AspNet.Mvc.DataSourceLoadOptions)">
+            <summary>
+            获取预约赛事的相关信息，支持分页查询
+            </summary>
+            <param name="loadOptions">查询参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.AppointmentRacingAppService.GetMyListDataAsync(DevExtreme.AspNet.Mvc.DataSourceLoadOptions)">
+            <summary>
+            获取我的预约赛事的相关信息，支持分页查询
+            </summary>
+            <param name="loadOptions">查询参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.AppointmentRacingAppService.GetAsync(System.Int32)">
+            <summary>
+            根据ID获取预约赛事信息
+            </summary>
+            <param name="id">预约赛事信息主键</param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.AppointmentRacingAppService.SaveAsync(IF.Porsche.AppointmentRacingEditDto)">
+            <summary>
+            新增或者更改预约赛事信息
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.AppointmentRacingAppService.GetEmptyEntityAsync">
+            <summary>
+            新增预约赛事的默认参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.AppointmentRacingAppService.BatchDeleteAsync(System.String)">
+            <summary>
+            批量删除预约赛事
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="P:IF.Porsche.AppointmentRacingEditDto.RacingId">
+            <summary>
+            赛事Id
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentRacingEditDto.SurName">
+            <summary>
+            姓
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentRacingEditDto.Name">
+            <summary>
+            名
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentRacingEditDto.Mobile">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentRacingEditDto.Option">
+            <summary>
+            门票类型
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentRacingDto.UserId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentRacingDto.RacingId">
+            <summary>
+            赛事Id
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentRacingDto.SurName">
+            <summary>
+            姓
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentRacingDto.Name">
+            <summary>
+            名
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentRacingDto.Mobile">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentRacingDto.Option">
+            <summary>
+            门票类型
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentRacingDto.AppointmentType">
+            <summary>
+            预约类型
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentRacingDto.CreationTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="M:IF.Porsche.RacingAppService.GetListDataAsync(DevExtreme.AspNet.Mvc.DataSourceLoadOptions)">
+            <summary>
+             获取赛事的相关信息，支持分页查询
+            </summary>
+            <param name="loadOptions">查询参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.RacingAppService.GetAsync(System.Int32)">
+            <summary>
+            根据ID获取赛事信息
+            </summary>
+            <param name="id">赛事信息主键</param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.RacingAppService.SaveAsync(IF.Porsche.RacingEditDto)">
+            <summary>
+            新增或者更改赛事信息
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.RacingAppService.GetEmptyEntityAsync">
+            <summary>
+            新增赛事的默认参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.RacingAppService.BatchDeleteAsync(System.String)">
+            <summary>
+            批量删除赛事
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="P:IF.Porsche.RacingEditDto.Title">
+            <summary>
+            赛事标题
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.RacingEditDto.Availability">
+            <summary>
+            Availability
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.RacingEditDto.Location">
+            <summary>
+            赛事地址
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.RacingEditDto.EventDates">
+            <summary>
+            赛事日期
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.RacingEditDto.Options">
+            <summary>
+            赛事参数 英文逗号分隔
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.RacingDto.Title">
+            <summary>
+            赛事标题
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.RacingDto.Availability">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.RacingDto.Location">
+            <summary>
+            地址
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.RacingDto.EventDates">
+            <summary>
+            赛事日期
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.RacingDto.Options">
+            <summary>
+            赛事参数 英文逗号分隔
+            </summary>
+        </member>
+        <member name="M:IF.Porsche.SmsAppService.GetListDataAsync(DevExtreme.AspNet.Mvc.DataSourceLoadOptions)">
+            <summary>
+            获取短信的相关信息，支持分页查询
+            </summary>
+            <param name="loadOptions">查询参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.SmsAppService.GetAsync(System.Int32)">
+            <summary>
+            根据ID获取短信信息
+            </summary>
+            <param name="id">短信信息主键</param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.SmsAppService.VerificationAsync(IF.Porsche.VerificationSmsDto)">
+            <summary>
+            验证短信验证码（无需鉴权）
+            </summary>
+            <param name="Mobile">短信信息主键</param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.SmsAppService.BatchDeleteAsync(System.String)">
+            <summary>
+            批量删除短信
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.SmsAppService.SendAsync(IF.Porsche.SmsEditDto)">
+            <summary>
+            发送短信验证码（无需鉴权）
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="P:IF.Porsche.VerificationSmsDto.Mobile">
+            <summary>
+            手机号码
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.VerificationSmsDto.Code">
+            <summary>
+            短信验证码
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.SmsEditDto.Mobile">
+            <summary>
+            手机号码
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.SmsDto.Mobile">
+            <summary>
+            手机号码
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.SmsDto.Code">
+            <summary>
+            短信验证码
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.SmsDto.Msg">
+            <summary>
+            短信信息
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.SmsDto.ResultMsg">
+            <summary>
+            短信接口返回信息
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.SmsDto.ResultCode">
+            <summary>
+            短信接口返回代码
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.SmsDto.CreationTime">
+            <summary>
+            发送时间
+            </summary>
+        </member>
+        <member name="M:IF.Porsche.AppointmentAppService.GetListDataAsync(DevExtreme.AspNet.Mvc.DataSourceLoadOptions)">
+            <summary>
+            获取预约服务的相关信息，支持分页查询
+            </summary>
+            <param name="loadOptions">查询参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.AppointmentAppService.GetMyListDataAsync(DevExtreme.AspNet.Mvc.DataSourceLoadOptions)">
+            <summary>
+            获取我的预约服务的相关信息，支持分页查询
+            </summary>
+            <param name="loadOptions">查询参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.AppointmentAppService.GetMyAllListDataAsync(DevExtreme.AspNet.Mvc.DataSourceLoadOptions)">
+            <summary>
+            获取我的所有预约，支持分页查询
+            </summary>
+            <param name="loadOptions">查询参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.AppointmentAppService.GetAsync(System.Int32)">
+            <summary>
+            根据ID获取预约服务信息
+            </summary>
+            <param name="id">预约服务信息主键</param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.AppointmentAppService.SaveAsync(IF.Porsche.AppointmentEditDto)">
+            <summary>
+            新增或者更改预约服务信息
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.AppointmentAppService.AdminSaveAsync(IF.Porsche.AdminAppointmentEditDto)">
+            <summary>
+            修改预约服务信息 管理后台使用
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.AppointmentAppService.GetEmptyEntityAsync">
+            <summary>
+            新增预约服务的默认参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.AppointmentAppService.BatchDeleteAsync(System.String)">
+            <summary>
+            批量删除预约服务
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.AppointmentAppService.WriteOff(System.String)">
+            <summary>
+            核销
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.AppointmentAppService.Total(System.Int32)">
+            <summary>
+            获取统计
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:IF.Porsche.AllAppointmentDto.Sex">
+            <summary>
+            性别
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AllAppointmentDto.UserId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AllAppointmentDto.StoreId">
+            <summary>
+            门店Id
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AllAppointmentDto.UserCarId">
+            <summary>
+            预约我的车辆
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AllAppointmentDto.FrameNo">
+            <summary>
+            车架号
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AllAppointmentDto.CarId">
+            <summary>
+            预约车型
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AllAppointmentDto.SurName">
+            <summary>
+            姓
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AllAppointmentDto.Name">
+            <summary>
+            名
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AllAppointmentDto.Mobile">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AllAppointmentDto.Date">
+            <summary>
+            预约服务日期
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AllAppointmentDto.ActivityAddress">
+            <summary>
+            活动地址
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AllAppointmentDto.ActivityTitle">
+            <summary>
+            活动标题
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AllAppointmentDto.EActivityTitle">
+            <summary>
+            活动标题 英文
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AllAppointmentDto.EActivityAddress">
+            <summary>
+            活动地址 英文
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AllAppointmentDto.CarName">
+            <summary>
+            预约车型
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AllAppointmentDto.StoreName">
+            <summary>
+            经销商名称
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AllAppointmentDto.StoreAddress">
+            <summary>
+            经销商地址
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AllAppointmentDto.StorePhone">
+            <summary>
+            经销商电话
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AllAppointmentDto.EStoreName">
+            <summary>
+            经销商名称(英文)
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AllAppointmentDto.EStoreAddress">
+            <summary>
+            经销商地址(英文)
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AllAppointmentDto.EStorePhone">
+            <summary>
+            经销商电话(英文)
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AllAppointmentDto.CreationTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AllAppointmentDto.Option">
+            <summary>
+            类型参数
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AllAppointmentDto.AppointmentType">
+            <summary>
+            预约类型
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AllAppointmentDto.Type">
+            <summary>
+            预约服务类型 0维修 1其他
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AllAppointmentDto.IsDoor">
+            <summary>
+            是否上门服务
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentEditDto.Sex">
+            <summary>
+            性别 0男 1女
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentEditDto.StoreId">
+            <summary>
+            门店Id
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentEditDto.UserCarId">
+            <summary>
+            预约我的车辆
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentEditDto.SurName">
+            <summary>
+            姓
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentEditDto.Name">
+            <summary>
+            名
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentEditDto.Mobile">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentEditDto.Date">
+            <summary>
+            预约服务日期
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentEditDto.Type">
+            <summary>
+            预约服务类型 0维修 1其他
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentEditDto.IsDoor">
+            <summary>
+            是否上门服务
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentEditDto.City">
+            <summary>
+            城市
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentEditDto.Area">
+            <summary>
+            地区
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentEditDto.Street">
+            <summary>
+            街道
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentEditDto.DetailAddress">
+            <summary>
+            详细地址
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AdminAppointmentEditDto.State">
+            <summary>
+            状态 0未到店/1已到店
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AdminAppointmentEditDto.ContactState">
+            <summary>
+            联系状态 0未联系/1联系失败/2延迟提醒/3确认预约
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AdminAppointmentEditDto.Remarks">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentDto.UserId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentDto.Sex">
+            <summary>
+            性别 0男 1女
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentDto.StoreId">
+            <summary>
+            门店Id
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentDto.UserCarId">
+            <summary>
+            预约我的车辆
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentDto.FrameNo">
+            <summary>
+            车架号
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentDto.CarId">
+            <summary>
+            预约车型
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentDto.SurName">
+            <summary>
+            姓
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentDto.Name">
+            <summary>
+            名
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentDto.Mobile">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentDto.Date">
+            <summary>
+            预约服务日期
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentDto.CarName">
+            <summary>
+            预约车型
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentDto.StoreName">
+            <summary>
+            经销商名称
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentDto.StoreAddress">
+            <summary>
+            经销商地址
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentDto.StorePhone">
+            <summary>
+            经销商电话
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentDto.EStoreName">
+            <summary>
+            经销商名称(英文)
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentDto.EStoreAddress">
+            <summary>
+            经销商地址(英文)
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentDto.EStorePhone">
+            <summary>
+            经销商电话(英文)
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentDto.CreationTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentDto.City">
+            <summary>
+            城市
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentDto.Area">
+            <summary>
+            地区
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentDto.Street">
+            <summary>
+            街道
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentDto.DetailAddress">
+            <summary>
+            详细地址
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentDto.AppointmentType">
+            <summary>
+            预约类型
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentDto.State">
+            <summary>
+            状态 0未到店/1已到店
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentDto.ContactState">
+            <summary>
+            联系状态 0未联系/1联系失败/2延迟提醒/3确认预约
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentDto.Remarks">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentDto.Type">
+            <summary>
+            预约服务类型 0维修 1其他
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentDto.IsDoor">
+            <summary>
+            是否上门服务
+            </summary>
+        </member>
+        <member name="M:IF.Porsche.AppointmentSmsAppService.GetListDataAsync(DevExtreme.AspNet.Mvc.DataSourceLoadOptions)">
+            <summary>
+             获取短信提醒的相关信息，支持分页查询
+            </summary>
+            <param name="loadOptions">查询参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.AppointmentSmsAppService.GetMyListDataAsync(DevExtreme.AspNet.Mvc.DataSourceLoadOptions)">
+            <summary>
+             获取短信提醒的相关信息，支持分页查询
+            </summary>
+            <param name="loadOptions">查询参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.AppointmentSmsAppService.GetAsync(System.Int32)">
+            <summary>
+            根据ID获取短信提醒信息
+            </summary>
+            <param name="id">短信提醒信息主键</param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.AppointmentSmsAppService.SaveAsync(IF.Porsche.AppointmentSmsEditDto)">
+            <summary>
+            新增或者更改短信提醒信息
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.AppointmentSmsAppService.GetEmptyEntityAsync">
+            <summary>
+            新增短信提醒的默认参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.AppointmentSmsAppService.BatchDeleteAsync(System.String)">
+            <summary>
+            批量删除短信提醒
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="P:IF.Porsche.AppointmentSmsEditDto.IsAlreadyRead">
+            <summary>
+            是否已读
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentSmsDto.UserId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentSmsDto.Mobile">
+            <summary>
+            用户手机号
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentSmsDto.FullName">
+            <summary>
+            用户名称
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentSmsDto.IsAlreadyRead">
+            <summary>
+            是否已读
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentSmsDto.StateText">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentSmsDto.Msg">
+            <summary>
+            提醒信息
+            </summary>
+        </member>
+        <member name="M:IF.Porsche.AppointmentTestDriveAppService.GetListDataAsync(DevExtreme.AspNet.Mvc.DataSourceLoadOptions)">
+            <summary>
+            获取预约试驾的相关信息，支持分页查询
+            </summary>
+            <param name="loadOptions">查询参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.AppointmentTestDriveAppService.GetMyListDataAsync(DevExtreme.AspNet.Mvc.DataSourceLoadOptions)">
+            <summary>
+            获取我的预约试驾的相关信息，支持分页查询
+            </summary>
+            <param name="loadOptions">查询参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.AppointmentTestDriveAppService.GetAsync(System.Int32)">
+            <summary>
+            根据ID获取预约试驾信息
+            </summary>
+            <param name="id">预约试驾信息主键</param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.AppointmentTestDriveAppService.SaveAsync(IF.Porsche.AppointmentTestDriveEditDto)">
+            <summary>
+            新增或者更改预约试驾信息
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.AppointmentTestDriveAppService.AdminSaveAsync(IF.Porsche.AdminAppointmentTestDriveEditDto)">
+            <summary>
+            修改预约试驾信息 管理后台使用
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.AppointmentTestDriveAppService.GetEmptyEntityAsync">
+            <summary>
+            新增预约试驾的默认参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.AppointmentTestDriveAppService.BatchDeleteAsync(System.String)">
+            <summary>
+            批量删除预约试驾
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.AppointmentTestDriveAppService.WriteOff(System.String)">
+            <summary>
+            核销
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.AppointmentTestDriveAppService.Total(System.Int32)">
+            <summary>
+            获取统计
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:IF.Porsche.AppointmentTestDriveEditDto.Sex">
+            <summary>
+            性别 0男 1女
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentTestDriveEditDto.StoreId">
+            <summary>
+            门店Id
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentTestDriveEditDto.CarId">
+            <summary>
+            预约车型
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentTestDriveEditDto.SurName">
+            <summary>
+            姓
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentTestDriveEditDto.Name">
+            <summary>
+            名
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentTestDriveEditDto.Mobile">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentTestDriveEditDto.Date">
+            <summary>
+            预约试驾日期
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AdminAppointmentTestDriveEditDto.State">
+            <summary>
+            状态 0未到店/1已到店
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AdminAppointmentTestDriveEditDto.ContactState">
+            <summary>
+            联系状态 0未联系/1联系失败/2延迟提醒/3确认预约
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AdminAppointmentTestDriveEditDto.Remarks">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentTestDriveDto.Sex">
+            <summary>
+            性别 0男 1女
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentTestDriveDto.UserId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentTestDriveDto.StoreId">
+            <summary>
+            门店Id
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentTestDriveDto.CarId">
+            <summary>
+            预约车型
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentTestDriveDto.SurName">
+            <summary>
+            姓
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentTestDriveDto.Name">
+            <summary>
+            名
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentTestDriveDto.Mobile">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentTestDriveDto.Date">
+            <summary>
+            预约试驾日期
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentTestDriveDto.CarName">
+            <summary>
+            预约车型
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentTestDriveDto.StoreName">
+            <summary>
+            经销商名称
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentTestDriveDto.StoreAddress">
+            <summary>
+            经销商地址
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentTestDriveDto.StorePhone">
+            <summary>
+            经销商电话
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentTestDriveDto.EStoreName">
+            <summary>
+            经销商名称(英文)
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentTestDriveDto.EStoreAddress">
+            <summary>
+            经销商地址(英文)
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentTestDriveDto.EStorePhone">
+            <summary>
+            经销商电话(英文)
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentTestDriveDto.AppointmentType">
+            <summary>
+            预约类型
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentTestDriveDto.CreationTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentTestDriveDto.State">
+            <summary>
+            状态 0未到店/1已到店
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentTestDriveDto.ContactState">
+            <summary>
+            联系状态 0未联系/1联系失败/2延迟提醒/3确认预约
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.AppointmentTestDriveDto.Remarks">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="M:IF.Porsche.DealerAppService.GetListDataAsync(DevExtreme.AspNet.Mvc.DataSourceLoadOptions)">
+            <summary>
+            获取商品的相关信息，支持分页查询
+            </summary>
+            <param name="loadOptions">查询参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.DealerAppService.GetAsync(System.Int32)">
+            <summary>
+            根据ID获取经销商信息
+            </summary>
+            <param name="id">经销商信息主键</param>
+            <returns></returns>
+        </member>
+        <member name="P:IF.Porsche.DealerEditDto.AUserId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.DealerEditDto.Name">
+            <summary>
+            经销商名称
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.DealerEditDto.DDesc">
+            <summary>
+            经销商详情
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.DealerEditDto.Phone">
+            <summary>
+            经销商电话
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.DealerEditDto.Address">
+            <summary>
+            地址
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.DealerEditDto.Longitude">
+            <summary>
+            经度
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.DealerEditDto.Latitude">
+            <summary>
+            纬度
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.DealerEditDto.Distance">
+            <summary>
+            折扣
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.DealerEditDto.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.DealerDto.AUserId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.DealerDto.Name">
+            <summary>
+            经销商名称
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.DealerDto.DDesc">
+            <summary>
+            经销商详情
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.DealerDto.Phone">
+            <summary>
+            经销商电话
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.DealerDto.Address">
+            <summary>
+            地址
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.DealerDto.Longitude">
+            <summary>
+            经度
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.DealerDto.Latitude">
+            <summary>
+            纬度
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.DealerDto.Distance">
+            <summary>
+            折扣
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.DealerDto.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="M:IF.Porsche.StoreAppService.GetListDataAsync(DevExtreme.AspNet.Mvc.DataSourceLoadOptions)">
+            <summary>
+            获取经销商的相关信息，支持分页查询
+            </summary>
+            <param name="loadOptions">查询参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.StoreAppService.GetAsync(System.Int32)">
+            <summary>
+            根据ID获取经销商信息
+            </summary>
+            <param name="id">经销商信息主键</param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.StoreAppService.SaveAsync(IF.Porsche.StoreEditDto)">
+            <summary>
+            新增或者更改经销商信息
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.StoreAppService.GetEmptyEntityAsync">
+            <summary>
+            新增经销商的默认参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.StoreAppService.BatchDeleteAsync(System.String)">
+            <summary>
+            批量删除经销商
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="P:IF.Porsche.StoreEditDto.Name">
+            <summary>
+            经销商名称
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.StoreEditDto.EName">
+            <summary>
+            经销商名称 英文
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.StoreEditDto.Phone">
+            <summary>
+            经销商电话
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.StoreEditDto.EPhone">
+            <summary>
+            经销商电话英文
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.StoreEditDto.Address">
+            <summary>
+            地址
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.StoreEditDto.EAddress">
+            <summary>
+            地址英文
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.StoreEditDto.Date">
+            <summary>
+            营业时间
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.StoreEditDto.EDate">
+            <summary>
+            营业时间英文
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.StoreEditDto.More">
+            <summary>
+            更多
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.StoreEditDto.EMore">
+            <summary>
+            更多英文
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.StoreEditDto.Type">
+            <summary>
+            类型 1保时捷，2阿斯顿马丁
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.StoreDto.Name">
+            <summary>
+            经销商名称
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.StoreDto.EName">
+            <summary>
+            经销商名称 英文
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.StoreDto.Phone">
+            <summary>
+            经销商电话
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.StoreDto.EPhone">
+            <summary>
+            经销商电话英文
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.StoreDto.Address">
+            <summary>
+            地址
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.StoreDto.EAddress">
+            <summary>
+            地址英文
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.StoreDto.Date">
+            <summary>
+            营业时间
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.StoreDto.EDate">
+            <summary>
+            营业时间英文
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.StoreDto.More">
+            <summary>
+            更多
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.StoreDto.EMore">
+            <summary>
+            更多英文
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.StoreDto.Type">
+            <summary>
+            类型 1保时捷，2阿斯顿马丁
+            </summary>
+        </member>
+        <member name="M:IF.Porsche.StoreWxPayAppService.GetListDataAsync(DevExtreme.AspNet.Mvc.DataSourceLoadOptions)">
+            <summary>
+            获取经销商支付商户的相关信息，支持分页查询
+            </summary>
+            <param name="loadOptions">查询参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.StoreWxPayAppService.GetAsync(System.Int32)">
+            <summary>
+            根据ID获取经销商支付商户信息
+            </summary>
+            <param name="id">经销商支付商户信息主键</param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.StoreWxPayAppService.SaveAsync(IF.Porsche.StoreWxPayEditDto)">
+            <summary>
+            新增或者更改经销商支付商户信息
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.StoreWxPayAppService.GetEmptyEntityAsync">
+            <summary>
+            新增经销商支付商户的默认参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.StoreWxPayAppService.BatchDeleteAsync(System.String)">
+            <summary>
+            批量删除经销商支付商户
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="P:IF.Porsche.StoreWxPayEditDto.StoreId">
+            <summary>
+            经销商Id
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.StoreWxPayEditDto.appid">
+            <summary>
+            公众账号ID
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.StoreWxPayEditDto.secret">
+            <summary>
+            应用密钥
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.StoreWxPayEditDto.mch_id">
+            <summary>
+            商户号
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.StoreWxPayEditDto.key">
+            <summary>
+            微信支付API密钥
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.StoreWxPayDto.StoreId">
+            <summary>
+            经销商Id
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.StoreWxPayDto.StoreName">
+            <summary>
+            经销商
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.StoreWxPayDto.appid">
+            <summary>
+            公众账号ID
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.StoreWxPayDto.secret">
+            <summary>
+            应用密钥
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.StoreWxPayDto.mch_id">
+            <summary>
+            商户号
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.StoreWxPayDto.key">
+            <summary>
+            微信支付API密钥
+            </summary>
+        </member>
+        <member name="M:IF.Porsche.UploadAppService.GetListDataAsync(DevExtreme.AspNet.Mvc.DataSourceLoadOptions)">
+            <summary>
+            获取文件的相关信息，支持分页查询
+            </summary>
+            <param name="loadOptions">查询参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.UploadAppService.GetAsync(System.Int32)">
+            <summary>
+            根据ID获取文件信息
+            </summary>
+            <param name="id">文件信息主键</param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.UploadAppService.UploadFilesAsync(Microsoft.AspNetCore.Http.IFormFileCollection)">
+            <summary>
+            上传文件
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Porsche.UploadAppService.BatchDeleteAsync(System.String)">
+            <summary>
+            批量删除文件
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="P:IF.Porsche.FileDto.FilePath">
+            <summary>
+            文件地址
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.FileDto.FileName">
+            <summary>
+            文件名称
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.FileDto.FileSize">
+            <summary>
+            文件大小
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.FileDto.HostAddress">
+            <summary>
+            上传主机地址
+            </summary>
+        </member>
+        <member name="M:IF.AdminRoleAppService.GetListDataAsync(DevExtreme.AspNet.Mvc.DataSourceLoadOptions)">
+            <summary>
+            获取角色列表，支持分页查询
+            </summary>
+            <param name="loadOptions">查询参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.AdminRoleAppService.BatchDeleteAsync(System.String)">
+            <summary>
+            批量删除角色
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="T:IF.Users.UserAppService">
+            <summary>
+            管理员角色使用接口
+            </summary>
+        </member>
+        <member name="M:IF.Users.UserAppService.ChangePassword(IF.Users.Dto.ChangePasswordDto)">
+            <summary>
+            变更密码
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:DbHelper.ISqlHelper">
+            <summary>
+            Sql操作助手
+            </summary>
+        </member>
+        <member name="P:DbHelper.ISqlHelper.Connection">
+            <summary>
+            当前连接字符串
+            </summary>
+        </member>
+        <member name="M:DbHelper.ISqlHelper.Query``1(System.String,System.Data.CommandType,System.Data.IDbDataParameter[])">
+            <summary>
+            查询
+            </summary>
+            <typeparam name="T">实体类</typeparam>
+            <param name="sqlText">Sql文本</param>
+            <param name="commandType">命令类型</param>
+            <param name="parms">参数</param>
+            <returns>返回泛型的实体对象</returns>
+        </member>
+        <member name="M:DbHelper.ISqlHelper.Query``1(System.String,System.Func{System.Data.IDbDataParameter[]},System.Data.CommandType)">
+            <summary>
+            查询
+            </summary>
+            <typeparam name="T">实体类</typeparam>
+            <param name="sqlText">Sql文本</param>
+            <param name="func">返回IDbDataParameter[]的委托</param>
+            <param name="commandType">命令类型</param>
+            <returns>返回泛型的实体对象</returns>
+        </member>
+        <member name="M:DbHelper.ISqlHelper.Scalar(System.String,System.Data.CommandType,System.Data.IDbDataParameter[])">
+            <summary>
+            查询首行首列
+            </summary>
+            <param name="sqlText">Sql文本</param>
+            <param name="commandType">命令类型</param>
+            <param name="parms">参数</param>
+            <returns>首行首列的值</returns>
+        </member>
+        <member name="M:DbHelper.ISqlHelper.Scalar(System.String,System.Func{System.Data.IDbDataParameter[]},System.Data.CommandType)">
+            <summary>
+            查询首行首列
+            </summary>
+            <param name="sqlText">Sql文本</param>
+            <param name="func">返回IDbDataParameter[]的委托</param>
+            <param name="commandType">命令类型</param>
+            <returns>首行首列的值</returns>
+        </member>
+        <member name="M:DbHelper.ISqlHelper.Scalar``1(System.String,System.Data.CommandType,System.Data.IDbDataParameter[])">
+            <summary>
+            查询首行首列
+            </summary>
+            <typeparam name="T">仅支持基础类型</typeparam>
+            <param name="sqlText">Sql文本</param>
+            <param name="commandType">命令类型</param>
+            <param name="parms">参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:DbHelper.ISqlHelper.Scalar``1(System.String,System.Func{System.Data.IDbDataParameter[]},System.Data.CommandType)">
+            <summary>
+            查询首行首列
+            </summary>
+            <typeparam name="T">仅支持基础类型</typeparam>
+            <param name="sqlText">Sql文本</param>
+            <param name="func">返回IDbDataParameter[]的委托</param>
+            <param name="commandType">命令类型</param>
+            <returns>首行首列的值</returns>
+        </member>
+        <member name="M:DbHelper.ISqlHelper.Execute(System.String,System.Data.CommandType,System.Data.IDbDataParameter[])">
+            <summary>
+            执行脚本
+            </summary>
+            <param name="sqlText">Sql文本</param>
+            <param name="commandType">命令类型</param>
+            <param name="parms">参数</param>
+            <returns>返回影响行数</returns>
+        </member>
+        <member name="M:DbHelper.ISqlHelper.Execute(System.String,System.Func{System.Data.IDbDataParameter[]},System.Data.CommandType)">
+            <summary>
+            执行脚本
+            </summary>
+            <param name="sqlText">Sql文本</param>
+            <param name="func">返回IDbDataParameter[]的委托</param>
+            <param name="commandType">命令类型</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

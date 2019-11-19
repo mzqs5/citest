@@ -1,0 +1,134 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>IF.Web.Core</name>
+    </assembly>
+    <members>
+        <member name="T:IF.Controllers.TokenAuthController">
+            <summary>
+            鉴权服务接口
+            </summary>
+        </member>
+        <member name="M:IF.Controllers.TokenAuthController.Authenticate(IF.Models.TokenAuth.AuthenticateModel)">
+            <summary>
+            账号密码登录获取授权Token
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Controllers.TokenAuthController.MobileAuthenticate(IF.Models.TokenAuth.MobileAuthenticateModel)">
+            <summary>
+            手机验证码登录获取授权Token
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IF.Controllers.TokenAuthController.DecodeUserInfo(IF.Models.TokenAuth.WechatLoginModel)">
+            <summary>
+            小程序登录获取授权Token
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="T:IF.Authorization.WeChatAppDecrypt">
+            <summary>  
+            处理微信小程序用户数据的签名验证和解密  
+            </summary>  
+        </member>
+        <member name="M:IF.Authorization.WeChatAppDecrypt.Decrypt(IF.Models.TokenAuth.DecodeInfo)">
+            <summary>  
+            根据微信小程序平台提供的解密算法解密数据  
+            </summary>  
+            <param name="encryptedData">加密数据</param>  
+            <param name="iv">初始向量</param>  
+            <param name="sessionKey">从服务端获取的SessionKey</param>  
+            <returns></returns>  
+        </member>
+        <member name="T:IF.Filter.ExceptionFilter">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:IF.Filter.ExceptionFilter.Logger">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:IF.Filter.ExceptionFilter.EventBus">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:IF.Filter.ExceptionFilter.#ctor(Abp.Web.Models.IErrorInfoBuilder,Abp.AspNetCore.Configuration.IAbpAspNetCoreConfiguration)">
+            <summary>
+            
+            </summary>
+            <param name="errorInfoBuilder"></param>
+            <param name="configuration"></param>
+        </member>
+        <member name="M:IF.Filter.ExceptionFilter.OnException(Microsoft.AspNetCore.Mvc.Filters.ExceptionContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:IF.Filter.ExceptionFilter.HandleAndWrapException(Microsoft.AspNetCore.Mvc.Filters.ExceptionContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:IF.Filter.ExceptionFilter.GetStatusCode(Microsoft.AspNetCore.Mvc.Filters.ExceptionContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:IF.Models.TokenAuth.MobileAuthenticateModel.Mobile">
+            <summary>
+            手机号码
+            </summary>
+        </member>
+        <member name="P:IF.Models.TokenAuth.MobileAuthenticateModel.Code">
+            <summary>
+            短信验证码
+            </summary>
+        </member>
+        <member name="P:IF.Models.TokenAuth.AuthenticateResultModel.AccessToken">
+            <summary>
+            身份令牌 请在请求头传入（前面加Bearer）
+            </summary>
+        </member>
+        <member name="P:IF.Models.TokenAuth.AuthenticateResultModel.EncryptedAccessToken">
+            <summary>
+            加密访问令牌
+            </summary>
+        </member>
+        <member name="P:IF.Models.TokenAuth.AuthenticateResultModel.ExpireInSeconds">
+            <summary>
+            过期秒数
+            </summary>
+        </member>
+        <member name="P:IF.Models.TokenAuth.AuthenticateResultModel.UserId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:IF.Models.TokenAuth.AuthenticateResultModel.Mobile">
+            <summary>
+            用户手机号
+            </summary>
+        </member>
+        <member name="P:IF.Models.TokenAuth.AuthenticateResultModel.UserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:IF.Models.TokenAuth.AuthenticateResultModel.StartTime">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+    </members>
+</doc>

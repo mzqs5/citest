@@ -1,6 +1,5 @@
-FROM microsoft/aspnetcore:2.0.1
-
+FROM microsoft/dotnet:2.2-aspnetcore-runtime AS base
 WORKDIR /app
-COPY . .
-
+EXPOSE 80
+COPY /IF.Web.Host .
 ENTRYPOINT ["dotnet", "IF.Web.Host.dll"]

@@ -19,10 +19,12 @@ namespace IF.Authorization
     public class UserAccountAppService : IFAppServiceBase, IUserAccountAppService
     {
         IRepository<User, long> UserRepository;
+        IRepository<OrderAggregate> OrderRepository;
         IRepository<StoreAggregate> StoreRepository;
         UserManager userManager;
         public UserAccountAppService(
             IRepository<User, long> UserRepository,
+            IRepository<OrderAggregate> OrderRepository,
             IRepository<StoreAggregate> StoreRepository,
             UserManager userManager)
         {
@@ -198,6 +200,8 @@ namespace IF.Authorization
             {
                 foreach (var id in ids.Split(','))
                 {
+                    if (OrderRepository.Count(p => p.UserId == int.Parse(id)) > 0)
+                        throw new AbpException("该会员存在订单！");
                     await UserRepository.DeleteAsync(kv => kv.Id == int.Parse(id));
                 }
                 await CurrentUnitOfWork.SaveChangesAsync();

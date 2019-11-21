@@ -2618,88 +2618,36 @@
             创建时间
             </summary>
         </member>
-        <member name="M:IF.Porsche.RacingAppService.GetListDataAsync(DevExtreme.AspNet.Mvc.DataSourceLoadOptions)">
+        <member name="M:IF.Porsche.RacingAppService.GetAsync">
             <summary>
-             获取赛事的相关信息，支持分页查询
+            获取票务轮播图
             </summary>
-            <param name="loadOptions">查询参数</param>
-            <returns></returns>
-        </member>
-        <member name="M:IF.Porsche.RacingAppService.GetAsync(System.Int32)">
-            <summary>
-            根据ID获取赛事信息
-            </summary>
-            <param name="id">赛事信息主键</param>
-            <returns></returns>
         </member>
         <member name="M:IF.Porsche.RacingAppService.SaveAsync(IF.Porsche.RacingEditDto)">
             <summary>
-            新增或者更改赛事信息
+            新增或者更改票务轮播图
             </summary>
             <param name="input"></param>
             <returns></returns>
         </member>
-        <member name="M:IF.Porsche.RacingAppService.GetEmptyEntityAsync">
+        <member name="P:IF.Porsche.RacingEditDto.Imgs">
             <summary>
-            新增赛事的默认参数
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:IF.Porsche.RacingAppService.BatchDeleteAsync(System.String)">
-            <summary>
-            批量删除赛事
-            </summary>
-            <param name="ids"></param>
-            <returns></returns>
-        </member>
-        <member name="P:IF.Porsche.RacingEditDto.Title">
-            <summary>
-            赛事标题
+            轮播图
             </summary>
         </member>
-        <member name="P:IF.Porsche.RacingEditDto.Availability">
+        <member name="P:IF.Porsche.RacingEditDto.MobileImgs">
             <summary>
-            Availability
+            轮播图移动端
             </summary>
         </member>
-        <member name="P:IF.Porsche.RacingEditDto.Location">
+        <member name="P:IF.Porsche.RacingDto.Imgs">
             <summary>
-            赛事地址
+            轮播图
             </summary>
         </member>
-        <member name="P:IF.Porsche.RacingEditDto.EventDates">
+        <member name="P:IF.Porsche.RacingDto.MobileImgs">
             <summary>
-            赛事日期
-            </summary>
-        </member>
-        <member name="P:IF.Porsche.RacingEditDto.Options">
-            <summary>
-            赛事参数 英文逗号分隔
-            </summary>
-        </member>
-        <member name="P:IF.Porsche.RacingDto.Title">
-            <summary>
-            赛事标题
-            </summary>
-        </member>
-        <member name="P:IF.Porsche.RacingDto.Availability">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:IF.Porsche.RacingDto.Location">
-            <summary>
-            地址
-            </summary>
-        </member>
-        <member name="P:IF.Porsche.RacingDto.EventDates">
-            <summary>
-            赛事日期
-            </summary>
-        </member>
-        <member name="P:IF.Porsche.RacingDto.Options">
-            <summary>
-            赛事参数 英文逗号分隔
+            轮播图移动端
             </summary>
         </member>
         <member name="M:IF.Porsche.SmsAppService.GetListDataAsync(DevExtreme.AspNet.Mvc.DataSourceLoadOptions)">

@@ -31,6 +31,7 @@ namespace IF.Authorization
             this.userManager = userManager;
             this.StoreRepository = StoreRepository;
             this.UserRepository = UserRepository;
+            this.OrderRepository = OrderRepository;
         }
 
         /// <summary>
@@ -200,17 +201,18 @@ namespace IF.Authorization
             {
                 foreach (var id in ids.Split(','))
                 {
-                    if (OrderRepository.Count(p => p.UserId == int.Parse(id)) > 0)
-                        throw new AbpException("该会员存在订单！");
+                    if (OrderRepository.GetAll().Any(p => p.UserId == int.Parse(id)))
+                        throw new AbpException("该用户存在订单，不能删除！");
+
                     await UserRepository.DeleteAsync(kv => kv.Id == int.Parse(id));
                 }
                 await CurrentUnitOfWork.SaveChangesAsync();
 
             }
-            catch (Exception e)
+            catch (AbpException e)
             {
                 Logger.Error("用户信息删除异常！", e);
-                throw new AbpException("用户信息删除异常！", e);
+                throw e;
             }
         }
         #endregion

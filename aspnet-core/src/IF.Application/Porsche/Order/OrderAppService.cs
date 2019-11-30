@@ -99,6 +99,7 @@ namespace IF.Porsche
                              PayTime = Order.PayTime,
                              PayCer = Order.PayCer,
                              PayMode = Order.PayMode,
+                             Progress = Order.Progress,
                              OrderItems = this.ObjectMapper.Map<List<OrderItemDto>>(Order.OrderItems)
                          };
             loadOptions.Sort = new SortingInfo[] { new SortingInfo() { Selector = "CreationTime", Desc = true } };

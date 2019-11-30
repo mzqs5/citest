@@ -107,6 +107,16 @@ namespace IF.Porsche
                     throw new EntityNotFoundException(typeof(AppointmentActivityAggregate), id);
                 }
                 var dto = this.ObjectMapper.Map<AppointmentActivityDto>(AppointmentActivity);
+                var Activity= AppointmentActivityRepository.FirstOrDefault(p => p.Id == dto.ActivityId);
+                if(Activity!=null)
+                dto.ActivityTitle = Activity.Name;
+                var Store = StoreRepository.FirstOrDefault(p => p.Id == dto.StoreId);
+                if (Store != null)
+                {
+                    dto.StoreName = Store.Name;
+                    dto.Phone = Store.Phone;
+                    dto.Address = Store.Address;
+                }
                 return dto;
             }
             catch (Exception e)
@@ -163,9 +173,8 @@ namespace IF.Porsche
         /// <returns></returns>
         [HttpPost]
         [AbpAuthorize("Admin.AppointmentActivity.Edit")]
-        public async Task AdminSaveAsync(AppointmentActivityEditDto input)
+        public async Task AdminSaveAsync(AdminAppointmentActivityEditDto input)
         {
-            input.StoreId = ExportHelper.GetStoreId(input.StoreId);
             try
             {
                 AppointmentActivityAggregate entity = this.ObjectMapper.Map<AppointmentActivityAggregate>(input);
@@ -389,5 +398,7 @@ namespace IF.Porsche
         }
 
         public string Remarks { get; set; }
+        public string Phone { get; set; }
+        public string Address { get; set; }
     }
 }

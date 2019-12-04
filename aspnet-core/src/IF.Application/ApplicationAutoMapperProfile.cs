@@ -90,6 +90,7 @@ namespace IF
             CreateMap<AppointmentWebActivityDto, AllAppointmentDto>();
             CreateMap<AppointmentTestDriveDto, AllAppointmentDto>();
             CreateMap<AppointmentEuroDriveDto, AllAppointmentDto>();
+            CreateMap<AdminAppointmentActivityEditDto, AppointmentActivityAggregate>();
             #endregion
 
         }

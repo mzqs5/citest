@@ -1183,7 +1183,7 @@
             <param name="input"></param>
             <returns></returns>
         </member>
-        <member name="M:IF.Porsche.AppointmentActivityAppService.AdminSaveAsync(IF.Porsche.AppointmentActivityEditDto)">
+        <member name="M:IF.Porsche.AppointmentActivityAppService.AdminSaveAsync(IF.Porsche.AdminAppointmentActivityEditDto)">
             <summary>
             更改预约活动信息
             </summary>
@@ -3722,12 +3722,22 @@
         </member>
         <member name="P:IF.Porsche.StoreWxPayEditDto.appid">
             <summary>
-            公众账号ID
+            小程序appID
             </summary>
         </member>
         <member name="P:IF.Porsche.StoreWxPayEditDto.secret">
             <summary>
-            应用密钥
+            小程序应用密钥
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.StoreWxPayEditDto.public_appid">
+            <summary>
+            公众号appID
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.StoreWxPayEditDto.public_secret">
+            <summary>
+            公众号应用密钥
             </summary>
         </member>
         <member name="P:IF.Porsche.StoreWxPayEditDto.mch_id">
@@ -3752,12 +3762,22 @@
         </member>
         <member name="P:IF.Porsche.StoreWxPayDto.appid">
             <summary>
-            公众账号ID
+            小程序appID
             </summary>
         </member>
         <member name="P:IF.Porsche.StoreWxPayDto.secret">
             <summary>
-            应用密钥
+            小程序应用密钥
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.StoreWxPayDto.public_appid">
+            <summary>
+            公众号appID
+            </summary>
+        </member>
+        <member name="P:IF.Porsche.StoreWxPayDto.public_secret">
+            <summary>
+            公众号应用密钥
             </summary>
         </member>
         <member name="P:IF.Porsche.StoreWxPayDto.mch_id">

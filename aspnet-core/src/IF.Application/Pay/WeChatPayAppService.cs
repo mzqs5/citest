@@ -24,6 +24,8 @@ using Microsoft.AspNetCore.Http;
 using Essensoft.AspNetCore.Payment.WeChatPay.Notify;
 using IF.Configuration;
 using Newtonsoft.Json;
+using Senparc.Weixin.MP.AdvancedAPIs;
+using Senparc.Weixin;
 
 namespace IF.Pay
 {
@@ -52,6 +54,7 @@ namespace IF.Pay
             this.UserRepository = UserRepository;
             this.StoreWxPayRepository = StoreWxPayRepository;
         }
+
         /// <summary>
         /// JSAPIÖ§¸¶
         /// </summary>

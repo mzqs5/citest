@@ -21,10 +21,18 @@ namespace IF.Tests.Users
         public async Task GetUsers_Test()
         {
             // Act
-            var output = await _userAppService.GetAll(new PagedUserResultRequestDto{MaxResultCount=20, SkipCount=0} );
+            var output = await _userAppService.GetAll(new PagedUserResultRequestDto { MaxResultCount = 20, SkipCount = 0 });
 
             // Assert
             output.Items.Count.ShouldBeGreaterThan(0);
+        }
+
+        [Fact]
+        public async Task Test()
+        {
+            var returnUrl = "https://blog.csdn.net/qq_36170585/article/details/69258120#123123";
+            var res = returnUrl.Substring(0,returnUrl.IndexOf("#"));
+
         }
 
         [Fact]

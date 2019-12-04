@@ -281,7 +281,8 @@ namespace IF.Authorization.Accounts
                 User user = UserRepository.GetAll().Where(k => k.Id == AbpSession.UserId.Value).FirstOrDefault();
                 user.Surname = input.Surname;
                 user.Name = input.Name;
-                user.Mobile = input.Mobile;
+                if (!string.IsNullOrWhiteSpace(input.Mobile))
+                    user.Mobile = input.Mobile;
                 user.Sex = input.Sex;
                 user.IsCarOwner = input.IsCarOwner;
                 user.LastStoreId = input.LastStoreId;

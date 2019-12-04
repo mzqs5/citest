@@ -107,15 +107,15 @@ namespace IF.Porsche
                     throw new EntityNotFoundException(typeof(AppointmentActivityAggregate), id);
                 }
                 var dto = this.ObjectMapper.Map<AppointmentActivityDto>(AppointmentActivity);
-                var Activity= AppointmentActivityRepository.FirstOrDefault(p => p.Id == dto.ActivityId);
-                if(Activity!=null)
-                dto.ActivityTitle = Activity.Name;
+                var Activity = StoreActivityRepository.FirstOrDefault(p => p.Id == dto.ActivityId);
+                if (Activity != null)
+                    dto.ActivityTitle = Activity.Title;
                 var Store = StoreRepository.FirstOrDefault(p => p.Id == dto.StoreId);
                 if (Store != null)
                 {
                     dto.StoreName = Store.Name;
-                    dto.Phone = Store.Phone;
-                    dto.Address = Store.Address;
+                    dto.StorePhone = Store.Phone;
+                    dto.StoreAddress = Store.Address;
                 }
                 return dto;
             }
@@ -398,7 +398,7 @@ namespace IF.Porsche
         }
 
         public string Remarks { get; set; }
-        public string Phone { get; set; }
-        public string Address { get; set; }
+        public string StorePhone { get; set; }
+        public string StoreAddress { get; set; }
     }
 }

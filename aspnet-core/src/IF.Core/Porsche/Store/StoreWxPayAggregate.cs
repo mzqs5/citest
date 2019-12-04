@@ -15,12 +15,12 @@ namespace IF.Porsche
         public int StoreId { get; set; }
 
         /// <summary>
-        /// 公众账号ID
+        /// 小程序appID
         /// </summary>
         public string appid { get; set; }
 
         /// <summary>
-        /// 应用密钥
+        /// 小程序应用密钥
         /// </summary>
         public string secret { get; set; }
 
@@ -33,6 +33,16 @@ namespace IF.Porsche
         /// 微信支付API密钥
         /// </summary>
         public string key { get; set; }
+
+        /// <summary>
+        /// 公众号appID
+        /// </summary>
+        public string public_appid { get; set; }
+
+        /// <summary>
+        /// 公众号应用密钥
+        /// </summary>
+        public string public_secret { get; set; }
 
     }
 }

@@ -54,6 +54,8 @@ namespace IF.Porsche
                              StoreName = Dealer.Name.Replace("-PMI", ""),
                              appid = StoreWxPay.appid,
                              secret = StoreWxPay.secret,
+                             public_appid = StoreWxPay.public_appid,
+                             public_secret = StoreWxPay.public_secret,
                              mch_id = StoreWxPay.mch_id,
                              key = StoreWxPay.key
                          };
@@ -105,6 +107,8 @@ namespace IF.Porsche
                     StoreWxPayAggregate StoreWxPayAggregate = StoreWxPayRepository.GetAll().Where(k => k.Id == input.Id).FirstOrDefault();
                     StoreWxPayAggregate.appid = entity.appid;
                     StoreWxPayAggregate.secret = entity.secret;
+                    StoreWxPayAggregate.public_appid = entity.public_appid;
+                    StoreWxPayAggregate.public_secret = entity.public_secret;
                     StoreWxPayAggregate.mch_id = entity.mch_id;
                     StoreWxPayAggregate.key = entity.key;
 
@@ -172,14 +176,24 @@ namespace IF.Porsche
         public int StoreId { get; set; }
 
         /// <summary>
-        /// 公众账号ID
+        /// 小程序appID
         /// </summary>
         public string appid { get; set; }
 
         /// <summary>
-        /// 应用密钥
+        /// 小程序应用密钥
         /// </summary>
         public string secret { get; set; }
+
+        /// <summary>
+        /// 公众号appID
+        /// </summary>
+        public string public_appid { get; set; }
+
+        /// <summary>
+        /// 公众号应用密钥
+        /// </summary>
+        public string public_secret { get; set; }
 
         /// <summary>
         /// 商户号
@@ -205,14 +219,24 @@ namespace IF.Porsche
         public string StoreName { get; set; }
 
         /// <summary>
-        /// 公众账号ID
+        /// 小程序appID
         /// </summary>
         public string appid { get; set; }
 
         /// <summary>
-        /// 应用密钥
+        /// 小程序应用密钥
         /// </summary>
         public string secret { get; set; }
+
+        /// <summary>
+        /// 公众号appID
+        /// </summary>
+        public string public_appid { get; set; }
+
+        /// <summary>
+        /// 公众号应用密钥
+        /// </summary>
+        public string public_secret { get; set; }
 
         /// <summary>
         /// 商户号

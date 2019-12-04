@@ -87,14 +87,14 @@ namespace IF.Porsche
                 {
                     AppointmentSmsAggregate sms = new AppointmentSmsAggregate();
                     sms.UserId = res.UserId;
-                    sms.Msg = $"您已预约{res.Date.Value.Year}年{res.Date.Value.Month}月{res.Date.Value.Day}日的维修保养服务，车型 {res.CarName}，追星{res.StoreName}期待您的光临！";
+                    sms.Msg = $"您已预约{res.Date.Value.Year}年{res.Date.Value.Month}月{res.Date.Value.Day}日的维修保养，车型 {res.CarName}，追星{res.StoreName}期待您的光临！";
                     AppointmentSmsRepository.Insert(sms);
                     Send(res.Mobile, sms.Msg);
                 });
                 var lista = result.Where(p => p.Date.HasValue && (p.Date.Value - DateTime.Now).Days == 5).ToList();
                 lista.ForEach(res =>
                 {
-                    Send(res.Mobile, $"您已预约{res.Date.Value.Year}年{res.Date.Value.Month}月{res.Date.Value.Day}日的维修保养服务，车型 {res.CarName}，追星{res.StoreName}期待您的光临！");
+                    Send(res.Mobile, $"您已预约{res.Date.Value.Year}年{res.Date.Value.Month}月{res.Date.Value.Day}日的维修保养，车型 {res.CarName}，追星{res.StoreName}期待您的光临！");
                 });
 
                 var result1 = from Appointment in AppointmentTestDriveRepository.GetAll().AsEnumerable()
@@ -125,14 +125,14 @@ namespace IF.Porsche
                 {
                     AppointmentSmsAggregate sms = new AppointmentSmsAggregate();
                     sms.UserId = res.UserId;
-                    sms.Msg = $"您已预约{res.Date.Value.Year}年{res.Date.Value.Month}月{res.Date.Value.Day}日的试驾服务，车型 {res.CarName}，追星{res.StoreName}期待您的光临！";
+                    sms.Msg = $"您已预约{res.Date.Value.Year}年{res.Date.Value.Month}月{res.Date.Value.Day}日的试驾，车型 {res.CarName}，追星{res.StoreName}期待您的光临！";
                     AppointmentSmsRepository.Insert(sms);
                     Send(res.Mobile, sms.Msg);
                 });
                 var listb = result1.Where(p => p.Date.HasValue && (p.Date.Value - DateTime.Now).Days == 5).ToList();
                 listb.ForEach(res =>
                 {
-                    Send(res.Mobile, $"您已预约{res.Date.Value.Year}年{res.Date.Value.Month}月{res.Date.Value.Day}日的试驾服务，车型 {res.CarName}，追星{res.StoreName}期待您的光临！");
+                    Send(res.Mobile, $"您已预约{res.Date.Value.Year}年{res.Date.Value.Month}月{res.Date.Value.Day}日的试驾，车型 {res.CarName}，追星{res.StoreName}期待您的光临！");
                 });
                 CurrentUnitOfWork.SaveChanges();
             }

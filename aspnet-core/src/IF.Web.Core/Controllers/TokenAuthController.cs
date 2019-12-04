@@ -169,7 +169,7 @@ namespace IF.Controllers
             //JsCodeResult result = new JsCodeResult();
             //DecodeUserInfo UserInfo = new DecodeUserInfo();
             //UserInfo.phoneNumber = "18175950003";
-            var user = await UserRepository.GetAll().Include(p => p.Wechats).FirstOrDefaultAsync(p => p.Mobile.Equals(UserInfo.phoneNumber));
+            var user = await UserRepository.GetAll().Include(p => p.Wechats).FirstOrDefaultAsync(p => p.Mobile.Equals(UserInfo.phoneNumber)|| p.UserName.Equals(UserInfo.phoneNumber));
             if (user == null)
             {
                 user = await _userRegistrationManager.RegisterAsync(
